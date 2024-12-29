@@ -8,6 +8,7 @@ export const HeaderContent = () => {
       <div className="header-image"></div>
       <aside></aside>
       <h1>Omer Eilam</h1>
+      <h2>coming soon</h2>
     </div>
   );
 };

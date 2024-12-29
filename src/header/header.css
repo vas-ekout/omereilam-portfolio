@@ -24,7 +24,9 @@ nav {
 }
 
 .header-image {
-  height: 680px;
+  min-height: 300px;
+  height: 70vh;
+  max-height: 800px;
   background-image: url("./assets/header-main-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,4 +43,56 @@ h1 {
   letter-spacing: 0.125em;
   padding-left: 2.25rem;
   line-height: 1em;
+}
+
+h2 {
+  grid-column: 1 / -1;
+  padding-left: 2.25rem;
+}
+
+.burger-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.burger-bar-container {
+  position: relative;
+  display: none;
+  padding: 10px;
+  width: fit-content;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger-bar {
+  background-color: white;
+  width: 26px;
+  height: 2px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 860px) {
+  .header-content {
+    display: block;
+    padding-inline: 10px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .burger-bar-container {
+    display: flex;
+  }
+
+  .header-image {
+    background-position: center right;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header-image {
+    background-position: center right -105px;
+  }
 }

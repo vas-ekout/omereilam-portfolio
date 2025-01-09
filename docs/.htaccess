@@ -1,0 +1,13 @@
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
+
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType image/png .png
+    AddType image/jpeg .jpeg .jpg
+    AddType image/svg+xml .svg
+    AddType font/woff2 .woff2
+</IfModule>

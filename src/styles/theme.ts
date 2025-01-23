@@ -38,7 +38,6 @@ const lightTheme = createTheme({
       fontWeight: 600,
       textTransform: "uppercase",
       letterSpacing: "0.425rem",
-      paddingLeft: "2.25rem",
       lineHeight: "3.35rem",
       zIndex: 1,
     },

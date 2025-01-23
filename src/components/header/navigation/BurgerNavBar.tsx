@@ -44,16 +44,16 @@ export const BurgerNavBar = () => {
     flexDirection: "column",
     gap: "5px",
     cursor: "pointer",
-    "&:before": {
-      content: '""',
-      backgroundColor: "hsl(0, 0%, 24%, 0.3)",
-      boxShadow: "0 0 40px 25px hsl(0, 0%, 24%, 0.3)",
-      width: "32px",
-      height: "19px",
-      borderRadius: "5px",
-      position: "absolute",
-      zIndex: -1,
-    },
+    // "&:before": {
+    //   content: '""',
+    //   backgroundColor: "hsl(0, 0%, 24%, 0.3)",
+    //   boxShadow: "0 0 40px 25px hsl(0, 0%, 24%, 0.3)",
+    //   width: "32px",
+    //   height: "19px",
+    //   borderRadius: "5px",
+    //   position: "absolute",
+    //   zIndex: -1,
+    // },
   };
   const overlaySx = {
     opacity: isOpen ? 1 : 0,

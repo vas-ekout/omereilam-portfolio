@@ -6,6 +6,8 @@ import {
   useTheme,
 } from "@mui/material";
 
+import DOMPurify from "dompurify";
+
 export interface HomeSectionProps {
   section: {
     label: string;
@@ -13,7 +15,7 @@ export interface HomeSectionProps {
     articles: {
       headline?: string;
       article: string;
-      img: string;
+      img?: string;
     }[];
   };
 }
@@ -25,7 +27,7 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
   const StyledHomeSection = styled("div")(() => ({
     display: "flex",
     flexDirection: "column",
-    gap: "45px",
+    gap: isSmallScreen ? "32px" : "45px",
   }));
 
   const StyledSectionArticle = styled("div")(() => ({
@@ -35,7 +37,7 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
       : section.imageFirst
         ? "row-reverse"
         : "row",
-    gap: "45px",
+    gap: isSmallScreen ? "24px" : "45px",
     marginBottom: "90px",
   }));
 
@@ -49,9 +51,19 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
         <StyledSectionArticle key={article.headline}>
           <div style={{ flexBasis: isSmallScreen ? "auto" : "40%" }}>
             {article.headline && (
-              <Typography variant="h3">{article.headline}</Typography>
+              <Typography
+                variant="h3"
+                component="div"
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(article.headline),
+                }}
+              />
             )}
-            <Typography variant="body1">{article.article}</Typography>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(article.article),
+              }}
+            />
             <Divider
               textAlign="right"
               sx={{
@@ -71,17 +83,19 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
               </Typography>
             </Divider>
           </div>
-          <div
-            data-cy="articel-image"
-            style={{
-              flexBasis: isSmallScreen ? "auto" : "60%",
-              backgroundImage: `url(${article.img})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center center",
-              height: isSmallScreen ? "400px" : "auto",
-            }}
-          />
+          {article.img && (
+            <div
+              data-cy="articel-image"
+              style={{
+                flexBasis: isSmallScreen ? "auto" : "60%",
+                backgroundImage: `url(${article.img})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+                height: isSmallScreen ? "400px" : "auto",
+              }}
+            />
+          )}
         </StyledSectionArticle>
       ))}
     </StyledHomeSection>

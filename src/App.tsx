@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@mui/material/styles";
 
 import { Header } from "./components/header/Header";
-import { CssBaseline, styled } from "@mui/material";
+import { CssBaseline, styled, useMediaQuery, useTheme } from "@mui/material";
 import { useState } from "react";
 import { darkTheme, lightTheme } from "./styles/theme";
 import { useEffect } from "react";
@@ -9,6 +9,9 @@ import { useMemo } from "react";
 import { Home } from "./components/Home/Home";
 
 const App = () => {
+  const muiTheme = useTheme();
+  const isSmallScreen = useMediaQuery(muiTheme.breakpoints.down("md"));
+
   const getSystemPreference = () =>
     window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -46,7 +49,7 @@ const App = () => {
 
   const MainContent = styled("main")(() => ({
     display: "grid",
-    gridTemplateColumns: "90px 1fr 90px",
+    gridTemplateColumns: isSmallScreen ? "16px 1fr 16px" : "90px 1fr 90px",
     paddingBottom: "270px",
   }));
 

@@ -34,7 +34,7 @@ const homeSections: HomeSectionProps[] = [
         {
           headline: "Solar System Meditation",
           article:
-            "The Solar System Meditation is a modern adaptation of Johannes Kepler's Music of the Spheres, where each planet corresponds to distinct sounds which continually evolve in time and space. The composition is divided into three segments: formation, crystallisation and decay. In each segment different sonic processes are set into motion. These embody a narrative – both mythological and scientific – that invites the listener to experience the nature of existence of our solar system as it is captured in sound.",
+            "The Solar System Meditation is a modern adaptation of Johannes Kepler's Music of the Spheres, where each planet corresponds to distinct sounds which continually evolve in time and space.",
           img: MusicSolarSystem,
         },
       ],
@@ -50,6 +50,11 @@ const homeSections: HomeSectionProps[] = [
             "In 2024/25 Omer Eilam participated in the QuerKlang project for experimental music education. Taking place in 10 high-schools in Berlin the project brings together teachers with musicians to lead school children in a creative process that culminates in a performance at the MAERZMUSIK Festival.",
           img: EducationQuerklang,
         },
+        {
+          headline: "lev",
+          article:
+            "lev is a Berlin-based collective of musicians whose aim is to facilitate electronic music education for the general public. In 2025 Omer Eilam will lead a series of lectures under the title 'The Art of Listening' in various libraries around Berlin.",
+        },
       ],
     },
   },
@@ -59,14 +64,13 @@ const homeSections: HomeSectionProps[] = [
       articles: [
         {
           headline: "What if we stay here",
-          article:
-            "What if we stay here... Floating atop the abyss Surrounded by beasts of prey. What if we do not look back… To former times of laughter and pain Those times are gone now.",
+          article: `What if we stay here...<br>Floating atop the abyss<br>Surrounded by beasts of prey`,
           img: WritingsWhatIfWeStay,
         },
         {
           headline: "The Dove of Peace",
           article:
-            "Yesterday I participated in a meeting with Faten, a Christian Palestinian woman living in Bethlehem. The meeting was organized by Gilda Bartel from Das Goetheanum magazine. It all started a couple of months ago when I sent my poem Israel to the editorial team of the magazine.",
+            "Yesterday I participated in a meeting with Faten, a Christian Palestinian woman living in Bethlehem. The meeting was organized by Gilda Bartel from Das Goetheanum magazine. It all started a couple of months ago when I sent my poem <i>Israel</i> to the editorial team of the magazine.",
           img: WritingsDoveOfPeace,
         },
       ],

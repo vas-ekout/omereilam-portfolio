@@ -39,7 +39,12 @@ export const HeaderContent = () => {
       <aside></aside>
       <HeaderImage />
       <aside></aside>
-      <Typography variant="h1">Omer Eilam</Typography>
+      <Typography
+        variant="h1"
+        sx={{ paddingLeft: isSmallScreen ? "6px" : "2.25rem" }}
+      >
+        Omer Eilam
+      </Typography>
       {/* <StyledSubHeader>coming soon</StyledSubHeader> */}
     </StyledHeaderContent>
   );

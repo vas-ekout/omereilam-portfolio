@@ -1,6 +1,6 @@
 import { styled, useTheme } from "@mui/material/styles";
-import headerImage from "./assets/header-main-img.jpg";
-import { useMediaQuery } from "@mui/material";
+import headerImage from "../../assets/images/header-main-img.jpg";
+import { Typography, useMediaQuery } from "@mui/material";
 
 export const HeaderContent = () => {
   const theme = useTheme();
@@ -17,7 +17,7 @@ export const HeaderContent = () => {
 
   const HeaderImage = styled("div")(() => ({
     minHeight: "300px",
-    height: "70vh",
+    height: "60vh",
     maxHeight: "800px",
     backgroundImage: `url(${headerImage})`,
     backgroundSize: "cover",
@@ -27,19 +27,6 @@ export const HeaderContent = () => {
         ? "center right -105px"
         : "center right"
       : "center center",
-  }));
-
-  const StyledHeader = styled("h1")(() => ({
-    position: "relative",
-    top: "-27px",
-    gridColumn: "1 / -1",
-    fontSize: "3em",
-    fontWeight: 600,
-    textTransform: "uppercase",
-    letterSpacing: "0.125em",
-    paddingLeft: "2.25rem",
-    lineHeight: "1em",
-    zIndex: 1,
   }));
 
   const StyledSubHeader = styled("h2")(() => ({
@@ -52,8 +39,8 @@ export const HeaderContent = () => {
       <aside></aside>
       <HeaderImage />
       <aside></aside>
-      <StyledHeader>Omer Eilam</StyledHeader>
-      <StyledSubHeader>coming soon</StyledSubHeader>
+      <Typography variant="h1">Omer Eilam</Typography>
+      {/* <StyledSubHeader>coming soon</StyledSubHeader> */}
     </StyledHeaderContent>
   );
 };

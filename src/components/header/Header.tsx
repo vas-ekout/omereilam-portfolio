@@ -8,7 +8,7 @@ export const Header = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <header>
+    <header style={{ marginBottom: 90 }}>
       {isSmallScreen ? <BurgerNavBar /> : <NavBar />}
       <HeaderContent />
     </header>

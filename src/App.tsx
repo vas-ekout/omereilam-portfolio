@@ -1,12 +1,12 @@
 import { ThemeProvider } from "@mui/material/styles";
 
-import "./App.css";
 import { Header } from "./components/header/Header";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, styled } from "@mui/material";
 import { useState } from "react";
 import { darkTheme, lightTheme } from "./styles/theme";
 import { useEffect } from "react";
 import { useMemo } from "react";
+import { Home } from "./components/Home/Home";
 
 const App = () => {
   const getSystemPreference = () =>
@@ -36,14 +36,29 @@ const App = () => {
     [isDarkMode]
   );
 
-  const toggleTheme = () => setIsDarkMode((prevMode) => !prevMode);
+  const PageWrapper = styled("div")(() => ({
+    minHeight: "100vh",
+    height: "100%",
+    width: "100%",
+    maxWidth: "1600px",
+    margin: "0 auto",
+  }));
+
+  const MainContent = styled("main")(() => ({
+    display: "grid",
+    gridTemplateColumns: "90px 1fr 90px",
+    paddingBottom: "270px",
+  }));
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div className="page-wrapper">
+      <PageWrapper>
         <Header />
-      </div>
+        <MainContent>
+          <Home />
+        </MainContent>
+      </PageWrapper>
     </ThemeProvider>
   );
 };

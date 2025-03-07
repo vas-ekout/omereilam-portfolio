@@ -7,6 +7,8 @@ export const HeaderContent = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const isXsScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
+  console.log(theme.breakpoints.down("md"));
+
   const StyledHeaderContent = styled("div")(() => ({
     display: isSmallScreen ? "block" : "grid",
     gridTemplateColumns: "90px 1fr 90px",

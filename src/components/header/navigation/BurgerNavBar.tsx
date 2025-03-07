@@ -23,7 +23,6 @@ const BurgerMenu = styled("div")(() => ({
 export const BurgerNavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [visibility, setVisibility] = useState("hidden");
-  console.log(visibility);
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));

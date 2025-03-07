@@ -1,13 +1,13 @@
-import { styled } from "@mui/material";
-import { HomeSection, HomeSectionProps } from "./HomeSection";
-import AboutImg from "../../assets/images/about-01.jpg";
-import MusicImaginary from "../../assets/images/music-imaginary-ecosystems-01.jpg";
-import MusicSolarSystem from "../../assets/images/music-solar-system-meditation-01.jpg";
-import EducationQuerklang from "../../assets/images/education-querklang-01.jpg";
-import WritingsWhatIfWeStay from "../../assets/images/writings-what-if-we-stay-01.jpg";
-import WritingsDoveOfPeace from "../../assets/images/writings-dove-of-peace-01.jpg";
+import { HomeSectionProps } from "sections/Home/HomeSection";
+import AboutImg from "../assets/images/about-01.jpg";
+import MusicImaginary from "../assets/images/music-imaginary-ecosystems-01.jpg";
+import MusicSolarSystem from "../assets/images/music-solar-system-meditation-01.jpg";
+import EducationQuerklang from "../assets/images/education-querklang-01.jpg";
+import EducationLev from "../assets/images/education-lev-01.jpg";
+import WritingsWhatIfWeStay from "../assets/images/writings-what-if-we-stay-01.jpg";
+import WritingsDoveOfPeace from "../assets/images/writings-dove-of-peace-01.jpg";
 
-const homeSections: HomeSectionProps[] = [
+const contentHomeSections: HomeSectionProps[] = [
   {
     section: {
       label: "About",
@@ -54,6 +54,7 @@ const homeSections: HomeSectionProps[] = [
           headline: "lev",
           article:
             "lev is a Berlin-based collective of musicians whose aim is to facilitate electronic music education for the general public. In 2025 Omer Eilam will lead a series of lectures under the title 'The Art of Listening' in various libraries around Berlin.",
+          img: EducationLev,
         },
       ],
     },
@@ -78,19 +79,4 @@ const homeSections: HomeSectionProps[] = [
   },
 ];
 
-const StyledHomeContainer = styled("div")(() => ({
-  gridColumn: "2 / 3",
-  display: "flex",
-  flexDirection: "column",
-  gap: "90px",
-}));
-
-export const Home = () => {
-  return (
-    <StyledHomeContainer>
-      {homeSections.map((section) => (
-        <HomeSection section={section.section} />
-      ))}
-    </StyledHomeContainer>
-  );
-};
+export default contentHomeSections;

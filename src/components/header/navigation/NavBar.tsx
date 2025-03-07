@@ -18,15 +18,15 @@ export const NavBar = () => {
         justifyContent: isSmallScreen ? "space-between" : "flex-end",
         gap: "2.75rem",
         py: isSmallScreen ? "80px" : "0",
-        textAlign: "right",
+        textAlign: "center",
       }}
     >
-      <NavItem>About</NavItem>
-      <NavItem>Music</NavItem>
-      <NavItem>Education</NavItem>
-      <NavItem>Writings</NavItem>
-      <NavItem>Calendar</NavItem>
-      <NavItem>Contact</NavItem>
+      <NavItem to="/about">About</NavItem>
+      <NavItem to="/music">Music</NavItem>
+      <NavItem to="/education">Education</NavItem>
+      <NavItem to="/writings">Writings</NavItem>
+      <NavItem to="/calendar">Calendar</NavItem>
+      <NavItem to="/contact">Contact</NavItem>
     </Box>
   );
 };

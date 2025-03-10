@@ -1,18 +1,22 @@
-import { useMediaQuery, useTheme } from "@mui/material";
+import { Box, SxProps, useMediaQuery, useTheme } from "@mui/material";
 
 interface PageImageProps {
   imageUrl: string;
   backgroundPosition?: string;
+  sx?: SxProps;
 }
 
-export const PageImage = ({ imageUrl, backgroundPosition }: PageImageProps) => {
+export const PageImage = ({
+  imageUrl,
+  backgroundPosition,
+  sx,
+}: PageImageProps) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <div
-      style={{
-        gridArea: "sidebar",
+    <Box
+      sx={{
         flexBasis: isSmallScreen ? "auto" : "100%",
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: "cover",
@@ -23,6 +27,7 @@ export const PageImage = ({ imageUrl, backgroundPosition }: PageImageProps) => {
         height: isSmallScreen ? "330px" : "600px",
         minHeight: "400px",
         minWidth: isSmallScreen ? "100%" : "360px",
+        ...sx,
       }}
     />
   );

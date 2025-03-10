@@ -8,13 +8,13 @@ export const About = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
-  const StyledHomeContainer = styled("div")(() => ({
+  const AboutContainer = styled("div")(() => ({
     display: "flex",
     flexDirection: "column",
     gap: isSmallScreen ? "32px" : "45px",
   }));
 
-  const StyledSectionArticle = styled("div")(() => ({
+  const SectionArticle = styled("div")(() => ({
     display: "flex",
     flexDirection: isSmallScreen
       ? "column-reverse"
@@ -26,12 +26,10 @@ export const About = () => {
   }));
 
   return (
-    <StyledHomeContainer>
+    <AboutContainer>
       <Headline label={contentAbout.label} />
-      <StyledSectionArticle>
-        <div style={{ gridArea: "main" }}>
-          <SanitizedParagraph article={contentAbout.article} />
-        </div>
+      <SectionArticle>
+        <SanitizedParagraph article={contentAbout.article} />
         {contentAbout.img && (
           <PageImage
             imageUrl={contentAbout.img}
@@ -40,7 +38,7 @@ export const About = () => {
             }
           />
         )}
-      </StyledSectionArticle>
-    </StyledHomeContainer>
+      </SectionArticle>
+    </AboutContainer>
   );
 };

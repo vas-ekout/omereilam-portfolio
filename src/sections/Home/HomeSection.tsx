@@ -42,8 +42,8 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
   return (
     <StyledHomeSection>
       <Headline label={section.label} />
-      {section.articles.map((article) => (
-        <StyledSectionArticle key={article.headline}>
+      {section.articles.map((article, index) => (
+        <StyledSectionArticle key={index}>
           <div style={{ flexBasis: isSmallScreen ? "auto" : "40%" }}>
             {article.headline && <TextHead label={article.headline} />}
             <SanitizedParagraph article={article.article} />

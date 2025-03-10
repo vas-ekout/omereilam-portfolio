@@ -10,12 +10,12 @@ export const NavBar = () => {
       component="nav"
       sx={{
         height: isSmallScreen ? "100%" : "90px",
-        paddingInline: isSmallScreen ? 0 : "90px",
+        paddingInline: isSmallScreen ? "20px" : "90px",
         listStyle: "none",
         display: "flex",
         flexDirection: isSmallScreen ? "column" : "row",
-        alignItems: "center",
-        justifyContent: isSmallScreen ? "space-between" : "flex-end",
+        alignItems: isSmallScreen ? "flex-start" : "center",
+        justifyContent: isSmallScreen ? "space-start" : "flex-end",
         gap: "2.75rem",
         py: isSmallScreen ? "80px" : "0",
         textAlign: "center",

@@ -3,22 +3,7 @@ import { styled } from "@mui/material/styles";
 import { NavBar } from "./NavBar";
 import { useState } from "react";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-
-const BurgerBar = styled("div")(({ theme }) => ({
-  backgroundColor: "currentColor",
-  width: "32px",
-  height: "3px",
-  borderRadius: "8px",
-}));
-
-const BurgerMenu = styled("div")(() => ({
-  position: "fixed",
-  left: 0,
-  paddingRight: "10px",
-  paddingLeft: "10px",
-  paddingTop: "10px",
-  zIndex: 10,
-}));
+import { motion } from "framer-motion";
 
 export const BurgerNavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +20,16 @@ export const BurgerNavBar = () => {
     }
   }, [isOpen]);
 
-  const burgerBarsContainerSx = {
+  const BurgerMenu = styled("div")(() => ({
+    position: "fixed",
+    left: 0,
+    paddingRight: "10px",
+    paddingLeft: "10px",
+    paddingTop: "10px",
+    zIndex: 10,
+  }));
+
+  const BurgerBarsContainer = styled(Box)(() => ({
     position: "relative",
     display: isSmallScreen ? "flex" : "none",
     padding: "10px",
@@ -43,28 +37,26 @@ export const BurgerNavBar = () => {
     flexDirection: "column",
     gap: "5px",
     cursor: "pointer",
-    // "&:before": {
-    //   content: '""',
-    //   backgroundColor: "hsl(0, 0%, 24%, 0.3)",
-    //   boxShadow: "0 0 40px 25px hsl(0, 0%, 24%, 0.3)",
-    //   width: "32px",
-    //   height: "19px",
-    //   borderRadius: "5px",
-    //   position: "absolute",
-    //   zIndex: -1,
-    // },
-  };
+  }));
+
+  const BurgerBar = styled("div")(() => ({
+    backgroundColor: "currentColor",
+    width: "32px",
+    height: "3px",
+    borderRadius: "8px",
+  }));
+
   const overlaySx = {
-    opacity: isOpen ? 1 : 0,
-    visibility: visibility,
+    opacity: isOpen ? "1" : "0",
     position: "fixed",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
     backgroundColor: "background.overlay",
+    backdropFilter: "blur(4px)",
     overflowY: "scroll",
-    zIndex: 2,
+    zIndex: 9,
     transitionProperty: "opacity",
     transitionDuration: "0.3s",
   };
@@ -72,13 +64,13 @@ export const BurgerNavBar = () => {
   return (
     <>
       <BurgerMenu onClick={() => setIsOpen(!isOpen)}>
-        <Box sx={burgerBarsContainerSx}>
+        <BurgerBarsContainer>
           <BurgerBar />
           <BurgerBar />
           <BurgerBar />
-        </Box>
+        </BurgerBarsContainer>
       </BurgerMenu>
-      <Box sx={overlaySx} aria-hidden={!isOpen}>
+      <Box aria-hidden={!isOpen} sx={overlaySx}>
         <NavBar />
       </Box>
     </>

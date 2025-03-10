@@ -1,53 +1,60 @@
 import { styled, useTheme } from "@mui/material/styles";
 import headerImage from "../../assets/images/header-main-img.jpg";
 import { Typography, useMediaQuery } from "@mui/material";
+import { useLocation, Link as RouterLink } from "react-router-dom";
+
+const StyledHeaderContent = styled("div")(({ theme }) => ({
+  display: "grid",
+  gridTemplateColumns: "90px 1fr 90px",
+  gridTemplateRows: "auto auto",
+  [theme.breakpoints.down("md")]: {
+    display: "block",
+    paddingInline: "10px",
+    paddingTop: "10px",
+  },
+}));
+
+const HeaderImage = styled("div", {
+  shouldForwardProp: (prop) => !["isHome"].includes(prop.toString()),
+})<{
+  isHome: boolean;
+}>(({ theme, isHome }) => ({
+  minHeight: isHome ? "300px" : "140px",
+  height: isHome ? "60vh" : "140px",
+  maxHeight: "800px",
+  backgroundImage: `url(${headerImage})`,
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center right",
+  transition: theme.transitions.create(["height", "min-height"], {
+    duration: 500,
+    easing: "cubic-bezier(0.4, 0, 0.2, 1)",
+  }),
+}));
 
 export const HeaderContent = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
-  const isXsScreen = useMediaQuery(theme.breakpoints.down("sm"));
-
-  console.log(theme.breakpoints.down("md"));
-
-  const StyledHeaderContent = styled("div")(() => ({
-    display: isSmallScreen ? "block" : "grid",
-    gridTemplateColumns: "90px 1fr 90px",
-    gridTemplateRows: "auto auto",
-    paddingInline: isSmallScreen ? "10px" : "0",
-    paddingTop: isSmallScreen ? "10px" : "0",
-  }));
-
-  const HeaderImage = styled("div")(() => ({
-    minHeight: "300px",
-    height: "60vh",
-    maxHeight: "800px",
-    backgroundImage: `url(${headerImage})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: isSmallScreen
-      ? isXsScreen
-        ? "center right -105px"
-        : "center right"
-      : "center center",
-  }));
-
-  const StyledSubHeader = styled("h2")(() => ({
-    gridColumn: "1 / -1",
-    paddingLeft: "2.25rem",
-  }));
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
     <StyledHeaderContent>
       <aside></aside>
-      <HeaderImage />
+      <HeaderImage isHome={isHome} />
       <aside></aside>
       <Typography
+        component={RouterLink}
+        to="/"
         variant="h1"
-        sx={{ paddingLeft: isSmallScreen ? "6px" : "2.25rem" }}
+        sx={{
+          paddingLeft: isSmallScreen ? "6px" : "2.25rem",
+          textDecoration: "none",
+          color: "inherit",
+        }}
       >
         Omer Eilam
       </Typography>
-      {/* <StyledSubHeader>coming soon</StyledSubHeader> */}
     </StyledHeaderContent>
   );
 };

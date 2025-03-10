@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { useMemo } from "react";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
+import { Music } from "./pages/Music";
 
 const App = () => {
   const PageWrapper = styled("div")(() => ({
@@ -72,6 +73,7 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
+                <Route path="music" element={<Music />} />
               </Routes>
             </MainContainer>
           </MainContentWrapper>

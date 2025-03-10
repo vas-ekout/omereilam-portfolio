@@ -18,7 +18,7 @@ const lightTheme = createTheme({
     background: {
       default: "hsl(0, 0%, 100%)",
       paper: "hsl(0, 0%, 100%)",
-      overlay: "hsl(0, 0%, 100%)",
+      overlay: "hsl(0, 0%, 100%, 90%)",
     },
     text: {
       primary: "hsl(0, 0%, 18%)",
@@ -87,7 +87,7 @@ const darkTheme = createTheme({
     background: {
       default: "hsl(0, 0%, 18%)",
       paper: "hsl(0, 0%, 18%)",
-      overlay: "hsl(0, 0%, 18%, 90%)",
+      overlay: "hsl(0, 0%, 18%, 96%)",
     },
     text: {
       primary: "hsl(0, 0%, 100%)",

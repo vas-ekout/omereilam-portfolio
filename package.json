@@ -13,8 +13,10 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.3.1",
     "dompurify": "^3.2.3",
+    "framer-motion": "^12.4.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.2.0"

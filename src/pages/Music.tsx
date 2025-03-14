@@ -11,12 +11,9 @@ import {
 import { useState } from "react";
 
 export const Music = () => {
-  const [detailViewIsOpen, setDetailViewIsOpen] = useState(false);
   const [detailObject, setDetailObject] = useState<ContentMusicProps | null>(
     null
   );
-
-  console.log(detailObject);
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -73,8 +70,10 @@ export const Music = () => {
     setDetailObject({
       title: contentMusic[index].title,
       article: contentMusic[index].article,
-      mainImg: contentMusic[index].mainImg,
-      imgs: contentMusic[index].imgs,
+      mainImg: contentMusic[index]?.mainImg,
+      imgs: contentMusic[index]?.imgs,
+      soundcloudSrc: contentMusic[index]?.soundcloudSrc,
+      youtubeSrc: contentMusic[index]?.youtubeSrc,
     });
   };
 
@@ -90,26 +89,24 @@ export const Music = () => {
           <Article
             article={detailObject.article}
             mainImg={detailObject.mainImg}
+            soundcloudSrc={detailObject?.soundcloudSrc}
+            youtubeSrc={detailObject?.youtubeSrc}
           />
         ) : (
-          contentMusic.map((item, index) =>
-            item.mainImg ? (
-              <ItemContainer
-                key={index}
-                onClick={() => handleOpenDetailView(index)}
-              >
-                <StyledImage
-                  src={item.mainImg}
-                  alt={`Album cover of ${item.title}`}
-                />
-                <StyledTitle>{item.title}</StyledTitle>
-              </ItemContainer>
-            ) : (
-              <ItemContainer key={index}>
-                <NoImage />
-                <StyledTitle>{item.title}</StyledTitle>
-              </ItemContainer>
-            )
+          contentMusic.map(
+            (item, index) =>
+              item.mainImg && (
+                <ItemContainer
+                  key={index}
+                  onClick={() => handleOpenDetailView(index)}
+                >
+                  <StyledImage
+                    src={item.mainImg}
+                    alt={`Album cover of ${item.title}`}
+                  />
+                  <StyledTitle>{item.title}</StyledTitle>
+                </ItemContainer>
+              )
           )
         )}
       </SectionGrid>

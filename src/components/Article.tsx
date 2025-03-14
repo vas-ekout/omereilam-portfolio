@@ -6,8 +6,16 @@ interface ArticleProps {
   article: string;
   mainImg?: string;
   imgs?: string[];
+  soundcloudSrc?: string;
+  youtubeSrc?: string;
 }
-export const Article = ({ article, mainImg }: ArticleProps) => {
+export const Article = ({
+  article,
+  mainImg,
+  imgs,
+  soundcloudSrc,
+  youtubeSrc,
+}: ArticleProps) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -22,7 +30,33 @@ export const Article = ({ article, mainImg }: ArticleProps) => {
 
   return (
     <SectionArticle>
-      <SanitizedParagraph article={article} sx={{}} />
+      <Box>
+        <SanitizedParagraph article={article} sx={{ mb: 8 }} />
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          {soundcloudSrc && (
+            <iframe
+              src={soundcloudSrc}
+              width="100%"
+              height="180"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+            />
+          )}
+          {youtubeSrc && (
+            <iframe
+              width="100%"
+              height="380"
+              src={youtubeSrc}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          )}
+        </Box>
+      </Box>
       {mainImg && (
         <Box
           component="img"

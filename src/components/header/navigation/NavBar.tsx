@@ -1,7 +1,11 @@
 import { NavItem } from "./NavItem";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 
-export const NavBar = () => {
+interface NavBarProps {
+  onClickNavItem: () => void;
+}
+
+export const NavBar = ({ onClickNavItem }: NavBarProps) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -21,12 +25,24 @@ export const NavBar = () => {
         textAlign: "center",
       }}
     >
-      <NavItem to="/about">About</NavItem>
-      <NavItem to="/music">Music</NavItem>
-      <NavItem to="/education">Education</NavItem>
-      <NavItem to="/writings">Writings</NavItem>
-      <NavItem to="/calendar">Calendar</NavItem>
-      <NavItem to="/contact">Contact</NavItem>
+      <NavItem onClick={onClickNavItem} route="/about">
+        About
+      </NavItem>
+      <NavItem onClick={onClickNavItem} route="/music">
+        Music
+      </NavItem>
+      <NavItem onClick={onClickNavItem} route="/education">
+        Education
+      </NavItem>
+      <NavItem onClick={onClickNavItem} route="/writings">
+        Writings
+      </NavItem>
+      <NavItem onClick={onClickNavItem} route="/calendar">
+        Calendar
+      </NavItem>
+      <NavItem onClick={onClickNavItem} route="/contact">
+        Contact
+      </NavItem>
     </Box>
   );
 };

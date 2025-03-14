@@ -1,21 +1,22 @@
 import { ReactNode } from "react";
-import { styled } from "@mui/material/styles";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Link } from "@mui/material";
 
 interface NavItemProps {
   children: ReactNode;
-  to: string;
+  route: string;
+  onClick: () => void;
 }
 
-export const NavItem = ({ children, to }: NavItemProps) => {
+export const NavItem = ({ children, route, onClick }: NavItemProps) => {
   const location = useLocation();
-  const isActive = location.pathname === to;
+  const isActive = location.pathname === route;
 
   return (
     <Link
+      onClick={onClick}
       component={RouterLink}
-      to={to}
+      to={route}
       underline="none"
       color="inherit"
       sx={{

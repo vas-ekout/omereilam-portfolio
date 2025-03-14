@@ -10,6 +10,7 @@ import { useMemo } from "react";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Music } from "./pages/Music";
+import { Education } from "./pages/Education";
 
 const App = () => {
   const PageWrapper = styled("div")(() => ({
@@ -74,6 +75,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="music" element={<Music />} />
+                <Route path="education" element={<Education />} />
               </Routes>
             </MainContainer>
           </MainContentWrapper>

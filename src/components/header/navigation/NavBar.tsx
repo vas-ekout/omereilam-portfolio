@@ -25,6 +25,7 @@ export const NavBar = ({ onClickNavItem }: NavBarProps) => {
   };
 
   const navItems = [
+    isSmallScreen && { route: "/", label: "Home" },
     { route: "/about", label: "About" },
     { route: "/music", label: "Music" },
     { route: "/education", label: "Education" },

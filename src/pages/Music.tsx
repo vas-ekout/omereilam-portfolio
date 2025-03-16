@@ -67,14 +67,7 @@ export const Music = () => {
   }));
 
   const handleOpenDetailView = (index: number) => {
-    setDetailObject({
-      title: contentMusic[index].title,
-      article: contentMusic[index].article,
-      mainImg: contentMusic[index]?.mainImg,
-      imgs: contentMusic[index]?.imgs,
-      soundcloudSrc: contentMusic[index]?.soundcloudSrc,
-      youtubeSrc: contentMusic[index]?.youtubeSrc,
-    });
+    setDetailObject(contentMusic[index]);
   };
 
   return (
@@ -86,19 +79,17 @@ export const Music = () => {
       />
       <SectionGrid>
         {detailObject ? (
-          <Article
-            article={detailObject.article}
-            mainImg={detailObject.mainImg}
-            soundcloudSrc={detailObject?.soundcloudSrc}
-            youtubeSrc={detailObject?.youtubeSrc}
-          />
+          <Article detailObject={detailObject} />
         ) : (
           contentMusic.map(
             (item, index) =>
               item.mainImg && (
                 <ItemContainer
                   key={index}
-                  onClick={() => handleOpenDetailView(index)}
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    handleOpenDetailView(index);
+                  }}
                 >
                   <StyledImage
                     src={item.mainImg}

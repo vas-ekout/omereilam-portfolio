@@ -1,9 +1,6 @@
-import { useEffect } from "react";
-import { styled } from "@mui/material/styles";
 import { NavBar } from "./NavBar";
 import { useState } from "react";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { motion } from "framer-motion";
+import { Box } from "@mui/material";
 import { AnimatedBurgerButton } from "./AnimatedBurgerButton";
 
 export const BurgerNavBar = () => {

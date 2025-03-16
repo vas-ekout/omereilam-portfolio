@@ -1,21 +1,13 @@
 import { Box, styled, useMediaQuery, useTheme } from "@mui/material";
 import { SanitizedParagraph } from "./typography/SanitizedParagraph";
-import { PageImage } from "./PageImage";
+import { ContentMusicProps } from "../data/contentMusic";
+import { TextHead } from "./typography/TextHead";
+import React from "react";
 
 interface ArticleProps {
-  article: string;
-  mainImg?: string;
-  imgs?: string[];
-  soundcloudSrc?: string;
-  youtubeSrc?: string;
+  detailObject: ContentMusicProps;
 }
-export const Article = ({
-  article,
-  mainImg,
-  imgs,
-  soundcloudSrc,
-  youtubeSrc,
-}: ArticleProps) => {
+export const Article = ({ detailObject }: ArticleProps) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -31,11 +23,38 @@ export const Article = ({
   return (
     <SectionArticle>
       <Box>
-        <SanitizedParagraph article={article} sx={{ mb: 8 }} />
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          {soundcloudSrc && (
+        {detailObject.sections.map((section, index) => (
+          <React.Fragment key={index + section.text}>
+            {section.textHead && <TextHead label={section.textHead} />}
+            <SanitizedParagraph
+              key={`paragraph-${index}`}
+              article={section.text}
+              sx={{ mb: 2 }}
+            />
+            {section.img && (
+              <Box
+                component="img"
+                src={section.img}
+                sx={{
+                  height: "auto",
+                  width: isSmallScreen ? "100%" : "50%",
+                }}
+              />
+            )}
+          </React.Fragment>
+        ))}
+        {detailObject.credits &&
+          detailObject.credits.map((credit, index) => (
+            <SanitizedParagraph
+              key={index}
+              article={credit}
+              sx={{ fontWeight: 600, fontSize: "1rem", lineHeight: "1.75rem" }}
+            />
+          ))}
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 8, mt: 10 }}>
+          {detailObject.soundcloudSrc && (
             <iframe
-              src={soundcloudSrc}
+              src={detailObject.soundcloudSrc}
               width="100%"
               height="180"
               scrolling="no"
@@ -43,11 +62,11 @@ export const Article = ({
               allow="autoplay"
             />
           )}
-          {youtubeSrc && (
+          {detailObject.youtubeSrc && (
             <iframe
               width="100%"
               height="380"
-              src={youtubeSrc}
+              src={detailObject.youtubeSrc}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -57,10 +76,10 @@ export const Article = ({
           )}
         </Box>
       </Box>
-      {mainImg && (
+      {detailObject.mainImg && (
         <Box
           component="img"
-          src={mainImg}
+          src={detailObject.mainImg}
           sx={{
             height: "auto",
             width: isSmallScreen ? "100%" : "25%",

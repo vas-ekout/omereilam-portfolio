@@ -9,8 +9,6 @@ const StyledHeaderContent = styled("div")(({ theme }) => ({
   gridTemplateRows: "auto auto",
   [theme.breakpoints.down("md")]: {
     display: "block",
-    paddingInline: "10px",
-    paddingTop: "10px",
   },
 }));
 
@@ -40,15 +38,16 @@ export const HeaderContent = () => {
 
   return (
     <StyledHeaderContent>
-      <aside></aside>
+      <aside />
       <HeaderImage isHome={isHome} />
-      <aside></aside>
+      <aside />
       <Typography
         component={RouterLink}
         to="/"
         variant="h1"
         sx={{
-          paddingLeft: isSmallScreen ? "6px" : "2.25rem",
+          display: "block",
+          paddingLeft: isSmallScreen ? "12px" : "2.25rem",
           textDecoration: "none",
           color: "inherit",
         }}

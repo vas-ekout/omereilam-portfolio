@@ -29,6 +29,7 @@ export const AnimatedBurgerButton = ({
           borderRadius: "50%",
           background: "none",
           cursor: "pointer",
+          WebkitTapHighlightColor: "transparent",
         }}
       >
         <motion.span

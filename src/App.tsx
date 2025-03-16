@@ -2,7 +2,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Header } from "./components/header/Header";
-import { CssBaseline, styled, useMediaQuery, useTheme } from "@mui/material";
+import { CssBaseline, styled, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import { darkTheme, lightTheme } from "./styles/theme";
 import { useEffect } from "react";
@@ -11,6 +11,7 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Music } from "./pages/Music";
 import { Education } from "./pages/Education";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const App = () => {
   const PageWrapper = styled("div")(() => ({
@@ -71,6 +72,7 @@ const App = () => {
           <Header />
           <MainContentWrapper>
             <MainContainer>
+              <ScrollToTop />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />

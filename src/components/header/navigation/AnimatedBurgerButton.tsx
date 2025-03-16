@@ -1,4 +1,5 @@
-import { MotionConfig, motion } from "framer-motion";
+import { useTheme } from "@mui/material";
+import { MotionConfig, MotionStyle, motion } from "framer-motion";
 
 interface AnimatedBurgerButtonProps {
   active: boolean;
@@ -9,6 +10,16 @@ export const AnimatedBurgerButton = ({
   active,
   onClick,
 }: AnimatedBurgerButtonProps) => {
+  const theme = useTheme();
+
+  const burgerBarStyling: MotionStyle = {
+    position: "absolute",
+    height: "3px",
+    width: "32px",
+    backgroundColor: theme.palette.text.primary,
+    borderRadius: "9999px",
+  };
+
   return (
     <MotionConfig
       transition={{
@@ -23,8 +34,8 @@ export const AnimatedBurgerButton = ({
         style={{
           zIndex: 10,
           position: "fixed",
-          height: "60px",
-          width: "60px",
+          height: "64px",
+          width: "64px",
           borderStyle: "none",
           borderRadius: "50%",
           background: "none",
@@ -35,11 +46,7 @@ export const AnimatedBurgerButton = ({
         <motion.span
           variants={VARIANTS.top}
           style={{
-            position: "absolute",
-            height: "3px",
-            width: "32px",
-            backgroundColor: "white",
-            borderRadius: "9999px",
+            ...burgerBarStyling,
             left: "50%",
             top: "35%",
             x: "-50%",
@@ -49,11 +56,7 @@ export const AnimatedBurgerButton = ({
         <motion.span
           variants={VARIANTS.middle}
           style={{
-            position: "absolute",
-            height: "3px",
-            width: "32px",
-            backgroundColor: "white",
-            borderRadius: "9999px",
+            ...burgerBarStyling,
             left: "50%",
             top: "50%",
             x: "-50%",
@@ -63,11 +66,7 @@ export const AnimatedBurgerButton = ({
         <motion.span
           variants={VARIANTS.bottom}
           style={{
-            position: "absolute",
-            height: "3px",
-            width: "32px",
-            backgroundColor: "white",
-            borderRadius: "9999px",
+            ...burgerBarStyling,
             left: "50%",
             bottom: "35%",
             x: "-50%",

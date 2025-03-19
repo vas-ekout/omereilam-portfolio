@@ -10,7 +10,7 @@ import {
 import { useTypewriter } from "../../hooks/useTypewriter";
 import WestIcon from "@mui/icons-material/West";
 interface HeadlineProps {
-  label: string;
+  label?: string;
   subLabel?: string;
   onClick?: () => void;
 }

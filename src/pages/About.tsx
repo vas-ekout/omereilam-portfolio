@@ -1,12 +1,32 @@
 import { SanitizedParagraph } from "../components/typography/SanitizedParagraph";
 import { Headline } from "../components/typography/Headline";
-import contentAbout from "../data/contentAbout";
-import { styled, useMediaQuery, useTheme } from "@mui/material";
+import { Box, styled, useMediaQuery, useTheme } from "@mui/material";
 import { PageImage } from "../components/PageImage";
+import { useEffect, useState } from "react";
+
+interface ContentAboutProps {
+  label: string;
+  article: string[];
+  img?: string;
+  imageFirst?: boolean;
+}
 
 export const About = () => {
+  const [contentAbout, setContentAbout] = useState<ContentAboutProps>();
+
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  useEffect(() => {
+    fetch("/contentAbout.json")
+      .then((response) => response.json())
+      .then((data: ContentAboutProps) => {
+        setContentAbout(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching contentMusic: ", error);
+      });
+  }, []);
 
   const AboutContainer = styled("div")(() => ({
     display: "flex",
@@ -18,7 +38,7 @@ export const About = () => {
     display: "flex",
     flexDirection: isSmallScreen
       ? "column-reverse"
-      : contentAbout.imageFirst
+      : contentAbout?.imageFirst
         ? "row-reverse"
         : "row",
     gap: isSmallScreen ? "24px" : "45px",
@@ -27,12 +47,14 @@ export const About = () => {
 
   return (
     <AboutContainer>
-      <Headline label={contentAbout.label} />
+      <Headline label={contentAbout?.label} />
       <SectionArticle>
-        <SanitizedParagraph article={contentAbout.article} />
-        {contentAbout.img && (
+        <Box>
+          {contentAbout?.article.map((p) => <SanitizedParagraph article={p} />)}
+        </Box>
+        {contentAbout?.img && (
           <PageImage
-            imageUrl={contentAbout.img}
+            imageUrl={`/images/${contentAbout.img}`}
             backgroundPosition={
               isSmallScreen ? undefined : "center left -200px"
             }

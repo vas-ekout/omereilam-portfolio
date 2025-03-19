@@ -75,9 +75,11 @@ const App = () => {
               <ScrollToTop />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="music" element={<Music />} />
-                <Route path="education" element={<Education />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/music" element={<Music />} />
+                <Route path="/music/:id" element={<Music />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/education/:id" element={<Education />} />
               </Routes>
             </MainContainer>
           </MainContentWrapper>

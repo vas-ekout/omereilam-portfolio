@@ -7,6 +7,7 @@ import React from "react";
 interface ArticleProps {
   detailObject: ContentMusicProps;
 }
+
 export const Article = ({ detailObject }: ArticleProps) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -26,15 +27,11 @@ export const Article = ({ detailObject }: ArticleProps) => {
         {detailObject.sections.map((section, index) => (
           <React.Fragment key={index + section.text}>
             {section.textHead && <TextHead label={section.textHead} />}
-            <SanitizedParagraph
-              key={`paragraph-${index}`}
-              article={section.text}
-              sx={{ mb: 2 }}
-            />
+            <SanitizedParagraph article={section.text} />
             {section.img && (
               <Box
                 component="img"
-                src={section.img}
+                src={`/images/${section.img}`}
                 sx={{
                   height: "auto",
                   width: isSmallScreen ? "100%" : "50%",
@@ -48,7 +45,12 @@ export const Article = ({ detailObject }: ArticleProps) => {
             <SanitizedParagraph
               key={index}
               article={credit}
-              sx={{ fontWeight: 600, fontSize: "1rem", lineHeight: "1.75rem" }}
+              sx={{
+                fontWeight: 600,
+                fontSize: "1rem",
+                lineHeight: "1.875rem",
+                mb: 0,
+              }}
             />
           ))}
         <Box sx={{ display: "flex", flexDirection: "column", gap: 8, mt: 10 }}>
@@ -79,7 +81,7 @@ export const Article = ({ detailObject }: ArticleProps) => {
       {detailObject.mainImg && (
         <Box
           component="img"
-          src={detailObject.mainImg}
+          src={`/images/${detailObject.mainImg}`}
           sx={{
             height: "auto",
             width: isSmallScreen ? "100%" : "25%",

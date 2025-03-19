@@ -10,7 +10,8 @@ interface NavItemProps {
 
 export const NavItem = ({ children, route, onClick }: NavItemProps) => {
   const location = useLocation();
-  const isActive = location.pathname === route;
+  const isActive =
+    location.pathname === route || location.pathname.startsWith(`${route}/`);
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 

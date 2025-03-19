@@ -1,4 +1,4 @@
-import { styled, useMediaQuery, useTheme } from "@mui/material";
+import { styled, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Headline } from "../../components/typography/Headline";
 
 import { TextHead } from "../../components/typography/TextHead";
@@ -12,7 +12,7 @@ export interface HomeSectionProps {
     imageFirst?: boolean;
     articles: {
       headline?: string;
-      article: string;
+      article: string[];
       img?: string;
     }[];
   };
@@ -38,6 +38,7 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
     gap: isSmallScreen ? "24px" : "45px",
     marginBottom: "90px",
   }));
+  console.log(section);
 
   return (
     <StyledHomeSection>
@@ -46,10 +47,12 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
         <StyledSectionArticle key={index}>
           <div style={{ flexBasis: isSmallScreen ? "auto" : "40%" }}>
             {article.headline && <TextHead label={article.headline} />}
-            <SanitizedParagraph article={article.article} />
+            {article.article.map((paragraph) => (
+              <SanitizedParagraph article={paragraph} />
+            ))}
             <ReadMoreSubline />
           </div>
-          {article.img && <SectionImage imageUrl={article.img} />}
+          {article.img && <SectionImage imageUrl={`/images/${article.img}`} />}
         </StyledSectionArticle>
       ))}
     </StyledHomeSection>

@@ -1,6 +1,6 @@
+import { slugify } from "../utils/Slugify";
 import { Article } from "../components/Article";
 import { Headline } from "../components/typography/Headline";
-import contentMusic, { ContentMusicProps } from "../data/contentMusic";
 import {
   Box,
   styled,
@@ -8,15 +8,57 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+
+interface ContentMusicProps {
+  title: string;
+  mainImg?: string;
+  sections: {
+    textHead?: string;
+    text: string;
+    img?: string;
+  }[];
+  credits?: string[];
+  imgs?: string[];
+  soundcloudSrc?: string;
+  youtubeSrc?: string;
+}
 
 export const Music = () => {
-  const [detailObject, setDetailObject] = useState<ContentMusicProps | null>(
-    null
-  );
+  const [detailObject, setDetailObject] = useState<any | null>(null);
+  const [contentMusic, setContentMusic] = useState<ContentMusicProps[]>();
+
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  useEffect(() => {
+    fetch("/contentMusic.json")
+      .then((response) => response.json())
+      .then((data: ContentMusicProps[]) => {
+        setContentMusic(data);
+        if (id) {
+          const foundItem = data.find((item) => slugify(item.title) === id);
+          setDetailObject(foundItem || null);
+        } else {
+          setDetailObject(null);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching contentMusic: ", error);
+      });
+  }, [id]);
+
+  const handleOpenDetailView = (item: any) => {
+    navigate(`/music/${slugify(item.title)}`);
+  };
+
+  const handleCloseDetailView = () => {
+    navigate("/music");
+  };
 
   const MusicContainer = styled("div")(() => ({
     display: "flex",
@@ -28,12 +70,6 @@ export const Music = () => {
     display: "grid",
     gap: 45,
     gridTemplateColumns: "repeat(auto-fit, minmax(16rem, 1fr))",
-  }));
-
-  const NoImage = styled("div")(() => ({
-    width: "100%",
-    height: "100%",
-    backgroundColor: "tomato",
   }));
 
   const StyledImage = styled("img")(() => ({
@@ -66,33 +102,29 @@ export const Music = () => {
     flexDirection: "column",
   }));
 
-  const handleOpenDetailView = (index: number) => {
-    setDetailObject(contentMusic[index]);
-  };
-
   return (
     <MusicContainer>
       <Headline
         label="Music"
         subLabel={detailObject?.title}
-        onClick={() => setDetailObject(null)}
+        onClick={handleCloseDetailView}
       />
       <SectionGrid>
         {detailObject ? (
           <Article detailObject={detailObject} />
         ) : (
-          contentMusic.map(
+          contentMusic?.map(
             (item, index) =>
               item.mainImg && (
                 <ItemContainer
                   key={index}
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
-                    handleOpenDetailView(index);
+                    handleOpenDetailView(item);
                   }}
                 >
                   <StyledImage
-                    src={item.mainImg}
+                    src={`/images/${item.mainImg}`}
                     alt={`Album cover of ${item.title}`}
                   />
                   <StyledTitle>{item.title}</StyledTitle>

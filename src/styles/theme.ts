@@ -64,6 +64,7 @@ const lightTheme = createTheme({
     body1: {
       fontSize: "1.125rem",
       lineHeight: "2.25rem",
+      marginBottom: 16,
     },
   },
   shape: {

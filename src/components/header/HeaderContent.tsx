@@ -17,6 +17,7 @@ const HeaderImage = styled(RouterLink, {
 })<{
   isHome: boolean;
 }>(({ theme, isHome }) => ({
+  display: "block",
   minHeight: isHome ? "300px" : "140px",
   height: isHome ? "60vh" : "140px",
   maxHeight: "800px",

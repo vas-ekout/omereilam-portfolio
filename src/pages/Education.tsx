@@ -58,7 +58,7 @@ export const Education = () => {
   };
 
   const handleCloseDetailView = () => {
-    navigate("/education");
+    navigate(-1);
   };
 
   const EducationContainer = styled("div")(() => ({

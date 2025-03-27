@@ -57,7 +57,7 @@ export const Music = () => {
   };
 
   const handleCloseDetailView = () => {
-    navigate("/music");
+    navigate(-1);
   };
 
   const MusicContainer = styled("div")(() => ({

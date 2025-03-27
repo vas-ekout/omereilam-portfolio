@@ -1,7 +1,6 @@
 import {
   Box,
   Divider,
-  IconButton,
   styled,
   Typography,
   useMediaQuery,
@@ -9,6 +8,7 @@ import {
 } from "@mui/material";
 import { useTypewriter } from "../../hooks/useTypewriter";
 import WestIcon from "@mui/icons-material/West";
+import { Link as RouterLink } from "react-router-dom";
 interface HeadlineProps {
   label?: string;
   subLabel?: string;
@@ -46,16 +46,23 @@ export const Headline = ({ label, subLabel, onClick }: HeadlineProps) => {
     <div style={{ gridColumn: "1 / 3" }}>
       <Typography
         variant="h2"
-        onClick={subLabel ? onClick : undefined}
         sx={{
           display: "flex",
           alignItems: "flex-start",
           flexDirection: isSmallScreen ? "column" : "row",
           width: "100%",
-          cursor: subLabel ? "pointer" : "auto",
         }}
       >
-        {label}
+        <RouterLink
+          to="/music"
+          style={{
+            cursor: subLabel ? "pointer" : "auto",
+            textDecoration: "none",
+            color: "inherit",
+          }}
+        >
+          {label}
+        </RouterLink>
         {subLabel && (
           <Box
             component={"span"}
@@ -71,7 +78,7 @@ export const Headline = ({ label, subLabel, onClick }: HeadlineProps) => {
             <Box sx={{ fontWeight: 300, ml: isSmallScreen ? 0 : 2 }}>
               {subLabel.slice(0, typedSublabel)}
             </Box>
-            <BackButton onClick={onClick} sx={{ mb: 0.5, ml: "auto" }}>
+            <BackButton onClick={onClick} sx={{ mb: 0.5, ml: "auto", mr: 0 }}>
               <WestIcon />
             </BackButton>
           </Box>

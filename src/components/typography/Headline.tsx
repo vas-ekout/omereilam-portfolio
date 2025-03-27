@@ -46,11 +46,13 @@ export const Headline = ({ label, subLabel, onClick }: HeadlineProps) => {
     <div style={{ gridColumn: "1 / 3" }}>
       <Typography
         variant="h2"
+        onClick={subLabel ? onClick : undefined}
         sx={{
           display: "flex",
           alignItems: "flex-start",
           flexDirection: isSmallScreen ? "column" : "row",
           width: "100%",
+          cursor: subLabel ? "pointer" : "auto",
         }}
       >
         {label}

@@ -16,8 +16,15 @@
         "text": "Following these developments I used the Imaginary Ecosystems framework in several live improvised concerts, among which were two performances which took place during the Küchensessions series in Hamburg in 2024. The results were recorded and later developed into two new compositions: Anthroposophia and Vision of the Valley of Dry Bones."
       },
       {
-        "text": "From a musical point of view, the two Imaginary Ecosystems compositions are an interesting case study for the relationship between composition and improvisation in electronic music. The working process began through an improvisation with the sound material, similar to the way organisms in nature playfully relate to each other. This allowed the sound organisms to evolve and interact in ever changing ways. The second step of recording the results was like taking snapshots or timelapses of these ecosystems. Finally, the concluding compositional process could be likened to sculpting in musical time: some segments were removed, others adjusted, a narrative incorporated and assembled into a musical whole. For example, one of the pieces contains an apocalyptic prophecy from the Book of Ezekiel which symbolizes both destruction and the potential for regeneration. The initial soundscape is sparse and fragmentary, consisting of brittle whispers suggesting aridity, decay and dissolution. Using digital synthesis techniques, these sound fragments are reconstructed, gradually forming richer textures that symbolize the process of revival.The two pieces together with my 2023 composition Solar System Meditation are due to be released as an album in 2025."
+        "text": "From a musical point of view, the two Imaginary Ecosystems compositions are an interesting case study for the relationship between composition and improvisation in electronic music. The working process began through an improvisation with the sound material, similar to the way organisms in nature playfully relate to each other. This allowed the sound organisms to evolve and interact in ever changing ways. The second step of recording the results was like taking snapshots or timelapses of these ecosystems. Finally, the concluding compositional process could be likened to sculpting in musical time: some segments were removed, others adjusted, a narrative incorporated and assembled into a musical whole. For example, one of the pieces contains an apocalyptic prophecy from the Book of Ezekiel which symbolizes both destruction and the potential for regeneration. The initial soundscape is sparse and fragmentary, consisting of brittle whispers suggesting aridity, decay and dissolution. Using digital synthesis techniques, these sound fragments are reconstructed, gradually forming richer textures that symbolize the process of revival."
+      },
+      {
+        "text": "The two pieces together with my 2023 composition Solar System Meditation are due to be released as an album in 2025."
       }
+    ],
+    "soundcloudSrc": [
+      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1611501414&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1796815201&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     ]
   },
   {
@@ -52,11 +59,16 @@
       "Video: Henry Mex",
       "Venue: Heilig Geist Kirche, Falkensee (Germany)"
     ],
-    "soundcloudSrc": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1433644327&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    "youtubeSrc": "https://www.youtube.com/embed/25m5UT1vzxM?si=CqDv_pIm7zsOwGq2"
+    "soundcloudSrc": [
+      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1433644327&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    ],
+    "youtubeSrc": [
+      "https://www.youtube.com/embed/25m5UT1vzxM?si=CqDv_pIm7zsOwGq2"
+    ]
   },
   {
     "title": "Solar System Meditation",
+    "mainImg": "music-solar-system-meditation-main.jpg",
     "sections": [
       {
         "text": "The Solar System Meditation is a modern adaptation of Johannes Kepler's Music of the Spheres. My starting point was the movement of the planets around the sun: their distance, their speed, their angle, etc. These parameters were then used to guide the curation of the sounds where, put simply, each planet corresponds to a single continually evolving sound with its unique frequency and spatial movement. Using dedicated software these spatial trajectories were simulated in sound and rendered in multichannel format that corresponds to any given loudspeaker arrangement."
@@ -68,7 +80,8 @@
         "text": "In a concert setting, listeners would find themselves seated at the heart of the hall, akin to the sun's central position, surrounded by celestial melodies and rhythms, as if the planets themselves were orbiting around them."
       }
     ],
-    "mainImg": "music-solar-system-meditation-main.jpg",
-    "soundcloudSrc": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1626574986&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    "soundcloudSrc": [
+      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1626574986&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    ]
   }
 ]

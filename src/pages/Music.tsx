@@ -11,7 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-interface ContentMusicProps {
+export interface ContentMusicProps {
   title: string;
   mainImg?: string;
   sections: {
@@ -21,8 +21,8 @@ interface ContentMusicProps {
   }[];
   credits?: string[];
   imgs?: string[];
-  soundcloudSrc?: string;
-  youtubeSrc?: string;
+  soundcloudSrc?: string[];
+  youtubeSrc?: string[];
 }
 
 export const Music = () => {

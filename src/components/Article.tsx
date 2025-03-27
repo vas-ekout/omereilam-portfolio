@@ -1,8 +1,8 @@
 import { Box, styled, useMediaQuery, useTheme } from "@mui/material";
 import { SanitizedParagraph } from "./typography/SanitizedParagraph";
-import { ContentMusicProps } from "../data/contentMusic";
 import { TextHead } from "./typography/TextHead";
 import React from "react";
+import { ContentMusicProps } from "../pages/Music";
 
 interface ArticleProps {
   detailObject: ContentMusicProps;
@@ -54,28 +54,30 @@ export const Article = ({ detailObject }: ArticleProps) => {
             />
           ))}
         <Box sx={{ display: "flex", flexDirection: "column", gap: 8, mt: 10 }}>
-          {detailObject.soundcloudSrc && (
-            <iframe
-              src={detailObject.soundcloudSrc}
-              width="100%"
-              height="180"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-            />
-          )}
-          {detailObject.youtubeSrc && (
-            <iframe
-              width="100%"
-              height="380"
-              src={detailObject.youtubeSrc}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          )}
+          {detailObject.soundcloudSrc &&
+            detailObject.soundcloudSrc.map((src) => (
+              <iframe
+                src={src}
+                width="100%"
+                height="180"
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+              />
+            ))}
+          {detailObject.youtubeSrc &&
+            detailObject.youtubeSrc.map((src) => (
+              <iframe
+                width="100%"
+                height="380"
+                src={src}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            ))}
         </Box>
       </Box>
       {detailObject.mainImg && (

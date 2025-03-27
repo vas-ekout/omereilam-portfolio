@@ -12,13 +12,15 @@ import { About } from "./pages/About";
 import { Music } from "./pages/Music";
 import { Education } from "./pages/Education";
 import ScrollToTop from "./utils/ScrollToTop";
+import { Contact } from "./pages/Contact";
+import { Writings } from "./pages/Writings";
 
 const App = () => {
   const PageWrapper = styled("div")(() => ({
     minHeight: "100vh",
     height: "100%",
     width: "100%",
-    maxWidth: "1600px",
+    maxWidth: "1280px",
     margin: "0 auto",
   }));
 
@@ -80,6 +82,8 @@ const App = () => {
                 <Route path="/music/:id" element={<Music />} />
                 <Route path="/education" element={<Education />} />
                 <Route path="/education/:id" element={<Education />} />
+                <Route path="/writings" element={<Writings />} />
+                <Route path="/contact" element={<Contact />} />
               </Routes>
             </MainContainer>
           </MainContentWrapper>

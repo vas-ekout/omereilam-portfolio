@@ -12,7 +12,7 @@ const StyledHeaderContent = styled("div")(({ theme }) => ({
   },
 }));
 
-const HeaderImage = styled("div", {
+const HeaderImage = styled(RouterLink, {
   shouldForwardProp: (prop) => !["isHome"].includes(prop.toString()),
 })<{
   isHome: boolean;
@@ -39,7 +39,7 @@ export const HeaderContent = () => {
   return (
     <StyledHeaderContent>
       <aside />
-      <HeaderImage isHome={isHome} />
+      <HeaderImage isHome={isHome} to="/" />
       <aside />
       <Typography
         component={RouterLink}

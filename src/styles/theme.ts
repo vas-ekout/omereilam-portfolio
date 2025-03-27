@@ -15,6 +15,9 @@ declare module "@mui/material/styles" {
 const lightTheme = createTheme({
   palette: {
     mode: "light",
+    primary: {
+      main: "#a1b8cc",
+    },
     background: {
       default: "hsl(0, 0%, 100%)",
       paper: "hsl(0, 0%, 100%)",
@@ -56,10 +59,14 @@ const lightTheme = createTheme({
       lineHeight: "1.55rem",
       marginBottom: "12px",
     },
+    h5: {
+      fontSize: 20,
+      fontWeight: 600,
+      cursor: "pointer",
+    },
     h6: {
       fontStyle: "italic",
       fontSize: "1rem",
-      cursor: "pointer",
     },
     body1: {
       fontSize: "1.125rem",
@@ -85,6 +92,9 @@ const darkTheme = createTheme({
   ...lightTheme,
   palette: {
     mode: "dark",
+    primary: {
+      main: "#a1b8cc",
+    },
     background: {
       default: "hsl(0, 0%, 18%)",
       paper: "hsl(0, 0%, 18%)",

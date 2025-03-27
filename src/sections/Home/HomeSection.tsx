@@ -1,19 +1,21 @@
-import { styled, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, styled, useMediaQuery, useTheme } from "@mui/material";
 import { Headline } from "../../components/typography/Headline";
 
 import { TextHead } from "../../components/typography/TextHead";
 import { ReadMoreSubline } from "../../components/typography/ReadMoreSubline";
 import { SanitizedParagraph } from "../../components/typography/SanitizedParagraph";
 import { SectionImage } from "../../components/SectionImage";
+import { slugify } from "utils/Slugify";
 
 export interface HomeSectionProps {
   section: {
     label: string;
     imageFirst?: boolean;
     articles: {
-      headline?: string;
+      headline: string;
       article: string[];
       img?: string;
+      readMoreUrl?: string;
     }[];
   };
 }
@@ -38,20 +40,32 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
     gap: isSmallScreen ? "24px" : "45px",
     marginBottom: "90px",
   }));
-  console.log(section);
+
+  const TextBox = styled("div")(() => ({
+    flexBasis: isSmallScreen ? "auto" : "40%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    gap: "45px",
+  }));
 
   return (
     <StyledHomeSection>
       <Headline label={section.label} />
       {section.articles.map((article, index) => (
         <StyledSectionArticle key={index}>
-          <div style={{ flexBasis: isSmallScreen ? "auto" : "40%" }}>
-            {article.headline && <TextHead label={article.headline} />}
-            {article.article.map((paragraph) => (
-              <SanitizedParagraph article={paragraph} />
-            ))}
-            <ReadMoreSubline />
-          </div>
+          <TextBox>
+            <Box>
+              {article.headline && <TextHead label={article.headline} />}
+              {article.article.map((paragraph) => (
+                <SanitizedParagraph article={paragraph} />
+              ))}
+            </Box>
+            <ReadMoreSubline
+              to={article.readMoreUrl ? article.readMoreUrl : undefined}
+              moreComingSoon={article.readMoreUrl ? false : true}
+            />
+          </TextBox>
           {article.img && <SectionImage imageUrl={`/images/${article.img}`} />}
         </StyledSectionArticle>
       ))}

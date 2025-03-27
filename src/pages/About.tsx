@@ -5,7 +5,6 @@ import { PageImage } from "../components/PageImage";
 import { useEffect, useState } from "react";
 
 interface ContentAboutProps {
-  label: string;
   article: string[];
   img?: string;
   imageFirst?: boolean;
@@ -47,7 +46,7 @@ export const About = () => {
 
   return (
     <AboutContainer>
-      <Headline label={contentAbout?.label} />
+      <Headline label="About" />
       <SectionArticle>
         <Box>
           {contentAbout?.article.map((p) => <SanitizedParagraph article={p} />)}
@@ -55,9 +54,7 @@ export const About = () => {
         {contentAbout?.img && (
           <PageImage
             imageUrl={`/images/${contentAbout.img}`}
-            backgroundPosition={
-              isSmallScreen ? undefined : "center left -200px"
-            }
+            backgroundPosition={isSmallScreen ? undefined : "center center"}
           />
         )}
       </SectionArticle>

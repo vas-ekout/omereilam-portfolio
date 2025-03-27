@@ -17,6 +17,7 @@ export const NavItem = ({ children, route, onClick }: NavItemProps) => {
 
   const navItemSx: SxProps = {
     position: "relative",
+    fontFamily: '"Geist Mono", monospace, sans-serif',
     fontWeight: isActive ? 600 : isSmallScreen ? 400 : 300,
     fontSize: isSmallScreen ? 24 : 18,
     cursor: "pointer",

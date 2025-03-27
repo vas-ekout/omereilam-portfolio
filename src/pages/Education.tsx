@@ -37,7 +37,7 @@ export const Education = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
-    fetch("/contentMusic.json")
+    fetch("/contentEducation.json")
       .then((response) => response.json())
       .then((data: ContentEducationProps[]) => {
         setContentEducation(data);
@@ -106,7 +106,7 @@ export const Education = () => {
   return (
     <EducationContainer>
       <Headline
-        label="Music"
+        label="Education"
         subLabel={detailObject?.title}
         onClick={handleCloseDetailView}
       />

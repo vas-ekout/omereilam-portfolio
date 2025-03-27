@@ -16,7 +16,7 @@ export const SectionImage = ({ imageUrl }: SectionImageProps) => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-        height: isSmallScreen ? "400px" : "auto",
+        height: isSmallScreen ? "400px" : "380px",
       }}
     />
   );

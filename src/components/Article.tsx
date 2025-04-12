@@ -55,8 +55,9 @@ export const Article = ({ detailObject }: ArticleProps) => {
           ))}
         <Box sx={{ display: "flex", flexDirection: "column", gap: 8, mt: 10 }}>
           {detailObject.soundcloudSrc &&
-            detailObject.soundcloudSrc.map((src) => (
+            detailObject.soundcloudSrc.map((src, index) => (
               <iframe
+                key={index}
                 src={src}
                 width="100%"
                 height="180"
@@ -66,8 +67,9 @@ export const Article = ({ detailObject }: ArticleProps) => {
               />
             ))}
           {detailObject.youtubeSrc &&
-            detailObject.youtubeSrc.map((src) => (
+            detailObject.youtubeSrc.map((src, index) => (
               <iframe
+                key={index}
                 width="100%"
                 height="380"
                 src={src}

@@ -14,6 +14,7 @@ import { Education } from "./pages/Education";
 import ScrollToTop from "./utils/ScrollToTop";
 import { Contact } from "./pages/Contact";
 import { Writings } from "./pages/Writings";
+import { Calendar } from "./pages/Calendar";
 
 const App = () => {
   const PageWrapper = styled("div")(() => ({
@@ -82,6 +83,7 @@ const App = () => {
                 <Route path="/music/:id" element={<Music />} />
                 <Route path="/education" element={<Education />} />
                 <Route path="/education/:id" element={<Education />} />
+                <Route path="/calendar" element={<Calendar />} />
                 <Route path="/writings" element={<Writings />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>

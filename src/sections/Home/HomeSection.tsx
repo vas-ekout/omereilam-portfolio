@@ -56,7 +56,14 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
         <StyledSectionArticle key={index}>
           <TextBox>
             <Box>
-              {article.headline && <TextHead label={article.headline} />}
+              {article.headline && (
+                <TextHead
+                  label={article.headline}
+                  projectUrl={
+                    article.readMoreUrl ? article.readMoreUrl : undefined
+                  }
+                />
+              )}
               {article.article.map((paragraph) => (
                 <SanitizedParagraph article={paragraph} />
               ))}

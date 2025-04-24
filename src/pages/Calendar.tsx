@@ -1,76 +1,150 @@
+import dayjs from "dayjs";
 import {
   Box,
   Divider,
+  Link,
   styled,
+  ToggleButton,
+  ToggleButtonGroup,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { Headline } from "../components/typography/Headline";
-import { SanitizedParagraph } from "../components/typography/SanitizedParagraph";
+import { useEffect, useState } from "react";
+import { CalendarCard } from "../components/CalendarCard";
 import { PageImage } from "../components/PageImage";
 
+interface StyledLinkProps {
+  content: string;
+  isActive: boolean;
+}
+
+interface ContentCalendarProps {
+  name: string;
+  date: string;
+  time: string;
+  location: string;
+  city: string;
+  eventText: string;
+  credits?: string;
+}
+
+const CalendarContainer = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: "45px",
+  [theme.breakpoints.down("md")]: {
+    gap: "32px",
+  },
+}));
+
+const SectionArticle = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  gap: "45px",
+  marginBottom: "90px",
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column-reverse",
+    gap: "24px",
+  },
+}));
+
+const StyledLink = styled(Link, {
+  shouldForwardProp: (prop) => prop !== "isActive",
+})<StyledLinkProps>(({ content, isActive }) => ({
+  textDecoration: "none",
+  color: "inherit",
+  cursor: "pointer",
+  fontWeight: isActive ? 600 : 300,
+  transition: "all 300ms",
+  textAlign: "center",
+  "&::before": {
+    display: "block",
+    content: `"${content}"`,
+    height: 0,
+    fontWeight: 600,
+    overflow: "hidden",
+    visibility: "hidden",
+  },
+  "&:hover": { fontWeight: 600 },
+}));
+
+type ActiveCalendar = "PAST" | "FUTURE";
+
+export interface ExtendedCalendarEventProps extends ContentCalendarProps {
+  dateTime: dayjs.Dayjs;
+}
+
 export const Calendar = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const [calendarEvents, setCalendarEvents] =
+    useState<ExtendedCalendarEventProps[]>();
 
-  const CalendarContainer = styled("div")(() => ({
-    display: "flex",
-    flexDirection: "column",
-    gap: isSmallScreen ? "32px" : "45px",
-  }));
+  const [activeCalendar, setActiveCalendar] =
+    useState<ActiveCalendar>("FUTURE");
 
-  const SectionArticle = styled("div")(() => ({
-    display: "flex",
-    flexDirection: isSmallScreen ? "column-reverse" : "row",
-    gap: isSmallScreen ? "24px" : "45px",
-    marginBottom: "90px",
-  }));
+  useEffect(() => {
+    fetch("/contentCalendar.json")
+      .then((response) => response.json())
+      .then((data: ContentCalendarProps[]) => {
+        const parsed = data
+          .map((item) => ({
+            ...item,
+            dateTime: dayjs(`${item.date}T${item.time}`),
+          }))
+          .sort((a, b) => a.dateTime.valueOf() - b.dateTime.valueOf());
+        setCalendarEvents(parsed);
+      })
+      .catch((error) => {
+        console.error("Error fetching contentCalendar: ", error);
+      });
+  }, []);
+
+  const today = dayjs().startOf("day");
+  const pastEvents = calendarEvents?.filter((e) => e.dateTime.isBefore(today));
+  const futureEvents = calendarEvents?.filter(
+    (e) => !e.dateTime.isBefore(today)
+  );
+
+  const displayedEvent = activeCalendar === "PAST" ? pastEvents : futureEvents;
 
   return (
     <CalendarContainer>
       <Headline label={"Calendar"} />
       <SectionArticle>
-        <Box>
-          <Typography
-            sx={{
-              textTransform: "uppercase",
-              fontSize: 22,
-              fontWeight: 400,
-              mb: 0,
-            }}
-          >
-            Improvised & Experimental
-          </Typography>
-          <Divider sx={{ mb: 1 }} />
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Box sx={{ fontStyle: "italic" }}>
-              <Typography sx={{ mb: 0, lineHeight: 1.5 }}>
-                19. March 2025
-              </Typography>
-              <Typography sx={{ lineHeight: 1.5 }}>7:00 pm</Typography>
-            </Box>
-            <Box sx={{ textAlign: "end", fontStyle: "italic" }}>
-              <Typography sx={{ mb: 0, lineHeight: 1.5 }}>
-                Hosek Contemporary
-              </Typography>
-              <Typography sx={{ lineHeight: 1.5 }}>Berlin</Typography>
-            </Box>
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+          <Box sx={{ display: "flex", gap: 1.5 }}>
+            <StyledLink
+              variant="body2"
+              content="past events"
+              isActive={activeCalendar === "PAST"}
+              onClick={() => setActiveCalendar("PAST")}
+            >
+              past events
+            </StyledLink>
+            <Typography variant="body2">|</Typography>
+            <StyledLink
+              variant="body2"
+              content="future events"
+              isActive={activeCalendar === "FUTURE"}
+              onClick={() => setActiveCalendar("FUTURE")}
+            >
+              future events
+            </StyledLink>
           </Box>
-          <Box sx={{ mt: 2 }}>
-            <Typography sx={{ mb: 0, lineHeight: 1.5 }}>
-              Imaginary Ecosystems live set.
-            </Typography>
-            <Typography sx={{ mb: 0, lineHeight: 1.5 }}>
-              Omer Eilam: Synthesizer, Liz Kosack: Synthesizer
-            </Typography>
-          </Box>
+          {displayedEvent?.map((item, index) => (
+            <CalendarCard key={index} calendarEvent={item} />
+          ))}
         </Box>
-
-        {/* <PageImage
-          imageUrl={`/images/about-01.jpg`}
-          backgroundPosition={isSmallScreen ? undefined : "center center"}
-        /> */}
+        <Box
+          component="img"
+          src="/images/about-01.jpg"
+          sx={{
+            objectFit: "cover",
+            width: { xs: "100%", md: "50%" },
+            height: { xs: "300px", md: "fit-content" },
+          }}
+        />
       </SectionArticle>
     </CalendarContainer>
   );

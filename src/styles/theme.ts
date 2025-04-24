@@ -59,6 +59,13 @@ const lightTheme = createTheme({
       lineHeight: "1.55rem",
       marginBottom: "12px",
     },
+    h4: {
+      textTransform: "uppercase",
+      fontSize: 22,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      marginBottom: 0,
+    },
     h5: {
       fontSize: 20,
       fontWeight: 600,
@@ -72,6 +79,12 @@ const lightTheme = createTheme({
       fontSize: "1.125rem",
       lineHeight: "2.25rem",
       marginBottom: 16,
+    },
+    body2: {
+      fontFamily: '"Geist Mono", monospace, sans-serif',
+      fontSize: "0.8rem",
+      lineHeight: 1,
+      marginBottom: 45,
     },
   },
   shape: {

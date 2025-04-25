@@ -1,23 +1,5 @@
 [
   {
-    "name": "Concert A",
-    "date": "2025-01-28",
-    "time": "18:00",
-    "location": "Berghain",
-    "city": "Berlin",
-    "eventText": "Full Orchestra",
-    "credits": "Omer Eilam: Flute"
-  },
-  {
-    "name": "Concert B",
-    "date": "2025-08-02",
-    "time": "19:00",
-    "location": "Wichern Kirche",
-    "city": "Falkensee",
-    "eventText": "Something nice to listen to",
-    "credits": "Omer Eilam: Piano"
-  },
-  {
     "name": "Improvised & Experimental",
     "date": "2025-03-19",
     "time": "19:00",
@@ -25,21 +7,5 @@
     "city": "Berlin",
     "eventText": "Imaginary Ecosystems live set",
     "credits": "Omer Eilam: Synthesizer, Liz Kosack: Synthesizer"
-  },
-  {
-    "name": "Live Set",
-    "date": "2025-07-12",
-    "time": "19:00",
-    "location": "Hosek Contemporary",
-    "city": "Berlin",
-    "eventText": "DJ Live set"
-  },
-  {
-    "name": "Reading Session",
-    "date": "2024-11-05",
-    "time": "16:00",
-    "location": "Karussell Bar",
-    "city": "Hamburg",
-    "eventText": "Reading something interesting"
   }
 ]

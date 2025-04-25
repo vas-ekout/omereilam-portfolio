@@ -105,8 +105,9 @@ export const Calendar = () => {
   const futureEvents = calendarEvents?.filter(
     (e) => !e.dateTime.isBefore(today)
   );
+  const noEvents = <Typography>More events coming soon!</Typography>;
 
-  const displayedEvent = activeCalendar === "PAST" ? pastEvents : futureEvents;
+  const displayedEvents = activeCalendar === "PAST" ? pastEvents : futureEvents;
 
   return (
     <CalendarContainer>
@@ -132,13 +133,15 @@ export const Calendar = () => {
               future events
             </StyledLink>
           </Box>
-          {displayedEvent?.map((item, index) => (
-            <CalendarCard key={index} calendarEvent={item} />
-          ))}
+          {activeCalendar === "FUTURE" && futureEvents?.length === 0
+            ? noEvents
+            : displayedEvents?.map((item, index) => (
+                <CalendarCard key={index} calendarEvent={item} />
+              ))}
         </Box>
         <Box
           component="img"
-          src="/images/about-01.jpg"
+          src="/images/calendar-01.jpg"
           sx={{
             objectFit: "cover",
             width: { xs: "100%", md: "50%" },

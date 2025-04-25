@@ -83,5 +83,65 @@
     "soundcloudSrc": [
       "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1626574986&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     ]
+  },
+  {
+    "title": "Aus LICHT",
+    "mainImg": "music-aus-licht-main.jpg",
+    "sections": [
+      {
+        "text": "In June 2019 a marathon performance of a large portion of the LICHT cycle, composed by Karlheinz Stockhausen, took place in the Westergasfabriek in Amsterdam. Featuring selected highlights from the seven operas it offered a unique overview of Stockhausen's masterpiece."
+      },
+      {
+        "text": "My part in the production was twofold: as a sound projection Master student I was to learn the pieces, work with the singers & instrumentalists and follow the precise instructions from the scores as well as those given by Kathinka Pasveer, the project's musical director, all in order to create a well balanced and clear sound image of the music. In addition to that, as a specialist in electronic music production, together with Juan Verdaguer, I was in charge of creating the synthesizer sounds for all of the pieces which required it. As the project was enormous in scale and involved many hundreds of musicians, artists, technicians etc., what follows is only give a brief description of my specific contribution to three of the main pieces."
+      },
+      {
+        "textHead": "INVASION – EXPLOSION",
+        "text": "One of the most challenging pieces in the production, INVASION – EXPLOSION depicts the fight between the LUZIFER & MICHAEL armies. The first is composed of 9 trombone players and the latter of 9 trumpeters. Each army is headed by a singer-leader together with a percussionist and a synth player. All of the warrior-musicians invade into the audience space and engage in a through-composed battle choreography while octophonic electronic music of fighter jets and sound bombs resound throughout the auditorium.",
+        "img": "music-aus-licht-invasion-explosion-1.jpg"
+      },
+      {
+        "text": "During the first instalment of the piece in March 2018 I played the synth part for the MICHAEL army. However, because of my sound projection duties I had to withdraw from this part for the final performances in the Gashouder. By then I was responsible for creating all of the synthesizer sounds for both the percussion and synth players of the two armies. The two synth players operated a ROLI Seaboard while the percussionists used a custom made drum pad. Overall more than 200 sounds of short \"war signals\" had to be created and balanced together with the brass players and electronic music.",
+        "img": "music-aus-licht-invasion-explosion-2.jpg"
+      },
+      {
+        "text": "The most challenging of all however was the finale of the piece, the crazy synthesizer solo SYNTHI-FOU. 130 sounds and extremely virtuosic passages spread across 3 keyboards and two drum pads. It took almost six months of hard (and often painful!) work together with Juan Verdaguer and pianist Ivan Pavlov. The picture below shows the three of us in Kürten working on each and every single sound together with Kathinka Pasveer, Stockhausen's collaborator for almost thirty years.",
+        "img": "music-aus-licht-kuerten.jpg"
+      },
+      {
+       "text": "",
+       "img": "music-aus-licht-synthifou.jpg"
+      },
+      {
+        "textHead": "DER KINDERFÄNGER",
+        "text": "In DER KINDERFÄNGER the children of EVA are seduced by a piped piper. They imitate all of his musical figures and finally follow him into the beyond. The ensemble includes of two live synth players (each playing two sets of keyboards), an additional pre-recorded synth, a solo flute player, 18 children (9 sopranos and 9 altos), 1 percussionist with portable instruments, a 4 channel tape and another stereo recording of water-drop sounds.",
+        "img": "music-aus-licht-kinderfaenger.jpg"
+      },
+      {
+        "text": "An entirely different approach had to be taken here since the piece was last performed as part of the MONTAG aus LICHT opera when it premiered in 1988. Hence, all of the sounds and synthesizers that were used back then were by now obsolete and had to be reconstructed. It is the first time the piece was performed since the original production and thus required a painstaking consultation with the original recordings, synthesizer cartridges, scores, correspondence with the original players and the Stockhausen Foundation, and an long process of tweaking and balancing the sounds during the rehearsals. In the end the new sounds had to mix well with the old ones while still sounding crystal clear and modern.",
+        "img": "music-aus-licht-kinderfaenger-probe.jpg"
+      },
+      {
+        "text": "Since I was responsible for both the synthesizer reconstruction and for the sound projection I had a lot of artistic leeway in determining how everything will eventually sound. For example, the piece ends with a section called ENTFÜHRUNG where the abducted children march and sing the EVA formula while the synthesizers play pointillistic sounds interspersed with bird calls. Many months before the actual performances I created those timbres based on Stockhausen's description in the score as sounding initially like antique cymbals and gradually becoming more synthetic in nature. I also hand-picked samples of bird calls that mixed well together with the pointillistic notes. Finally, during the rehearsals in The Hague and Amsterdam I used SPAT Revolution (bottom left picture) and constructed a LEMUR controller for the iPad (bottom right picture) so that I was able to move all the sounds in circular trajectories within the space of the auditorium which was gradually becoming more echoic and distant as the children disappeared.",
+        "img": "music-aus-licht-spat.jpg"
+      },
+      {
+        "text": "",
+        "img": "music-aus-licht-lemur.jpg"
+      },
+      {
+        "textHead": "ENGEL PROZESSIONEN",
+        "text": "The final piece in the 3-day marathon of Aus LICHT was a procession of angels, a modern day cantata for the adoration of God sung by 7 groups of angels in 7 different languages and performed beautifully by the singers of Capella Amsterdam together with 4 soloists - The Angels of Joy."
+      },
+      {
+        "text": "The challenge for the sound projection of the piece was to overcome the enormous and dry space (after acoustic treatment) of the Gashouder. Each group of angel singers had to be audible in every spot of the hall while still sounding organic. A further complication was that due to the movements of the processions the amplified sound had to follow the acoustic source in order to sound natural."
+      },
+      {
+        "text": "Having 16 groups of line arrays spread equidistantly in a circle around the audience together with a center cluster of speakers for the middle of the hall, we could program the DiGiCo SD7 mixer with specific routings of singers to speakers which changed according to their positions in the different sections of the piece. While the 4 soloists had to be individually amplified and panned, for the choir groups we used only two wireless microphones per group (DPA 4060 attached to the middle of the scalp of two singers in each group). The signal was sent to a computer running Altiverb and routed back to the speakers in the hall. In that way we managed to simulate a reverberant space without overly amplifying the choir singers."
+      },
+      {
+        "text": "The picture below shows the end of the piece, where the angel groups approach the center of the the hall to sing the final tutti. The mixing console can be seen left of center, operated by Juan Verdaguer and myself.",
+         "img": "music-aus-licht-engel-prozessionen.jpg"
+      }
+    ]
   }
 ]

@@ -15,6 +15,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import { Contact } from "./pages/Contact";
 import { Writings } from "./pages/Writings";
 import { Calendar } from "./pages/Calendar";
+import { Footer } from "./pages/Footer";
 
 const App = () => {
   const PageWrapper = styled("div")(() => ({
@@ -89,6 +90,7 @@ const App = () => {
               </Routes>
             </MainContainer>
           </MainContentWrapper>
+          <Footer />
         </PageWrapper>
       </ThemeProvider>
     </Router>

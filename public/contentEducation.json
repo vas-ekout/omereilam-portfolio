@@ -4,7 +4,10 @@
     "mainImg": "education-querklang-main.jpg",
     "sections": [
       {
-        "text": "In 2024/25 Omer Eilam participated in the QuerKlang project for experimental music education. Taking place in 10 high-schools in Berlin the project brings together teachers with musicians to lead school children in a creative process that culminates in a performance at the MAERZMUSIK Festival."
+        "text": "In 2024/25 Omer Eilam participated in the QuerKlang project for experimental music education. Taking place in 10 high-schools in Berlin the project brought together teachers and musicians to lead school children in a creative process that culminated in a performance at the MAERZMUSIK Festival."
+      },
+      {
+        "text": "More information about the project can be found in the <a href='https://www.querklang.eu'>QuerKlang</a> website."
       }
     ]
   },
@@ -13,7 +16,13 @@
     "mainImg": "education-the-art-of-listening-main.jpg",
     "sections": [
       {
-        "text": "In 2025 Omer Eilam will lead a series of lectures under the title 'The Art of Listening' in various libraries across Berlin as part of lev-berlin, a collective of musicians whose aim is to facilitate electronic music education for the general public."
+        "text": "The Art of Listening is a workshop series on electronic and experimental music offered to the general public at the Pablo Neruda library in Berlin. Unlike traditional lectures which focus on the history of the field or the techniques used by composers and artists, the focus is on the experience of listening itself and thus facilitate an alternative way of listening to music."
+      },
+      {
+        "text": "By alternating between sound and our inner experience, we discover new musical languages and new ways of listening to them. Topics range from Karlheinz Stockhausen's spiritual serialism to musique concrète and Luigi Nono's musical activism."
+      },
+      {
+        "text": "A total of 6-8 workshops will be facilitated by Omer Eilam on behalf of <a href='https://www.lev-berlin.de/'>lev-berlin</a>, a collective of musicians organizing projects of electronic music education for the general public. A pilot workshop took place on April 3rd. Subsequent meetings will take place during the second half of 2025."
       }
     ]
   }

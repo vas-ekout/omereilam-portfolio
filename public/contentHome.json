@@ -5,7 +5,7 @@
       "articles": [
         {
           "article": [
-            "Omer Eilam is a musician based in Berlin. He composes electroacoustic music and plays synthesizers, piano and flute. With works ranging from the sonification of heavenly bodies to the destruction of forests, his focus remains on what it means to be human in our day and age. Alongside his compositional praxis he also teaches experimental music in schools and gives workshops for exploring the voice through playful improvisations. As a writer his focus lies on existential themes related to music, spirituality, philosophy and activism."
+            "Omer Eilam is a musician based in Berlin. He composes electroacoustic music and plays synthesizers, piano and flute. With works ranging from the sonification of heavenly bodies to the destruction of forests, his focus lies on what it means to be human in our day and age. Alongside his compositional practice he teaches experimental music in schools and gives workshops for exploring the voice and developing the Art of Listening. As a writer he explores existential themes related to music, spirituality, philosophy and activism."
           ],
           "img": "about-01.jpg",
           "readMoreUrl": "about"
@@ -57,7 +57,8 @@
           "img": "education-lev-01.jpg",
           "readMoreUrl": "education/the-art-of-listening"
         }
-      ]
+      ],
+      "imageFirst": true
     }
   },
   {

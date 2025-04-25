@@ -57,6 +57,7 @@ const lightTheme = createTheme({
       textTransform: "uppercase",
       letterSpacing: "0.08rem",
       lineHeight: "1.55rem",
+      marginTop: "45px",
       marginBottom: "12px",
     },
     h4: {

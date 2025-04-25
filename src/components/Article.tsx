@@ -34,7 +34,9 @@ export const Article = ({ detailObject }: ArticleProps) => {
                 src={`/images/${section.img}`}
                 sx={{
                   height: "auto",
-                  width: isSmallScreen ? "100%" : "50%",
+                  mt: 4,
+                  mb: 4,
+                  width: isSmallScreen ? "100%" : "100%",
                 }}
               />
             )}

@@ -29,7 +29,7 @@ export const NavBar = ({ onClickNavItem }: NavBarProps) => {
     { route: "/about", label: "About" },
     { route: "/music", label: "Music" },
     { route: "/education", label: "Education" },
-    { route: "/writings", label: "Writings" },
+    // { route: "/writings", label: "Writings" },
     { route: "/calendar", label: "Calendar" },
     { route: "/contact", label: "Contact" },
   ];

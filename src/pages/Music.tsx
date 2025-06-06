@@ -1,5 +1,5 @@
-import { slugify } from "../utils/Slugify";
-import { Article } from "../components/Article";
+import { slugify } from "../utils/slugify";
+import { Article, GridContentProps } from "../components/Article";
 import { Headline } from "../components/typography/Headline";
 import {
   Box,
@@ -11,23 +11,9 @@ import {
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-export interface ContentMusicProps {
-  title: string;
-  mainImg?: string;
-  sections: {
-    textHead?: string;
-    text: string;
-    img?: string;
-  }[];
-  credits?: string[];
-  imgs?: string[];
-  soundcloudSrc?: string[];
-  youtubeSrc?: string[];
-}
-
 export const Music = () => {
   const [detailObject, setDetailObject] = useState<any | null>(null);
-  const [contentMusic, setContentMusic] = useState<ContentMusicProps[]>();
+  const [contentMusic, setContentMusic] = useState<GridContentProps[]>();
 
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -38,7 +24,7 @@ export const Music = () => {
   useEffect(() => {
     fetch("/contentMusic.json")
       .then((response) => response.json())
-      .then((data: ContentMusicProps[]) => {
+      .then((data: GridContentProps[]) => {
         setContentMusic(data);
         if (id) {
           const foundItem = data.find((item) => slugify(item.title) === id);

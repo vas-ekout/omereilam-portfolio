@@ -5,7 +5,6 @@ import { TextHead } from "../../components/typography/TextHead";
 import { ReadMoreSubline } from "../../components/typography/ReadMoreSubline";
 import { SanitizedParagraph } from "../../components/typography/SanitizedParagraph";
 import { SectionImage } from "../../components/SectionImage";
-import { slugify } from "utils/Slugify";
 
 export interface HomeSectionProps {
   section: {

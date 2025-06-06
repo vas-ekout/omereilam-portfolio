@@ -2,10 +2,26 @@ import { Box, styled, useMediaQuery, useTheme } from "@mui/material";
 import { SanitizedParagraph } from "./typography/SanitizedParagraph";
 import { TextHead } from "./typography/TextHead";
 import React from "react";
-import { ContentMusicProps } from "../pages/Music";
+import { ImageDisplayer } from "./ImageDisplayer";
+
+export interface GridContentSection {
+  textHead?: string;
+  text: string;
+  img?: { src: string; credit?: string };
+}
+
+export interface GridContentProps {
+  title: string;
+  mainImg?: string;
+  sections: GridContentSection[];
+  credits?: string[];
+  imgs?: string[];
+  soundcloudSrc?: string[];
+  youtubeSrc?: string[];
+}
 
 interface ArticleProps {
-  detailObject: ContentMusicProps;
+  detailObject: GridContentProps;
 }
 
 export const Article = ({ detailObject }: ArticleProps) => {
@@ -28,18 +44,7 @@ export const Article = ({ detailObject }: ArticleProps) => {
           <React.Fragment key={index + section.text}>
             {section.textHead && <TextHead label={section.textHead} />}
             <SanitizedParagraph article={section.text} />
-            {section.img && (
-              <Box
-                component="img"
-                src={`/images/${section.img}`}
-                sx={{
-                  height: "auto",
-                  mt: 4,
-                  mb: 4,
-                  width: isSmallScreen ? "100%" : "100%",
-                }}
-              />
-            )}
+            {section.img && <ImageDisplayer section={section} />}
           </React.Fragment>
         ))}
         {detailObject.credits &&

@@ -101,13 +101,19 @@ export const Calendar = () => {
   }, []);
 
   const today = dayjs().startOf("day");
-  const pastEvents = calendarEvents?.filter((e) => e.dateTime.isBefore(today));
+
+  const pastEvents = calendarEvents
+    ?.filter((e) => e.dateTime.isBefore(today))
+    .sort((a, b) => b.dateTime.valueOf() - a.dateTime.valueOf());
+
   const futureEvents = calendarEvents?.filter(
     (e) => !e.dateTime.isBefore(today)
   );
+
   const noEvents = <Typography>More events coming soon!</Typography>;
 
   const displayedEvents = activeCalendar === "PAST" ? pastEvents : futureEvents;
+  console.log(displayedEvents);
 
   return (
     <CalendarContainer>

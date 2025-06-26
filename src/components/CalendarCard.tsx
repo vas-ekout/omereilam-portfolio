@@ -1,4 +1,11 @@
-import { alpha, Box, Divider, Typography, useTheme } from "@mui/material";
+import {
+  alpha,
+  Box,
+  Divider,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { ExtendedCalendarEventProps } from "../pages/Calendar";
 
 interface CalendarCardProps {
@@ -7,6 +14,7 @@ interface CalendarCardProps {
 
 export const CalendarCard = ({ calendarEvent }: CalendarCardProps) => {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box
@@ -39,7 +47,12 @@ export const CalendarCard = ({ calendarEvent }: CalendarCardProps) => {
             {calendarEvent.dateTime.format("h:mm A")}
           </Typography>
         </Box>
-        <Box sx={{ textAlign: "end", fontStyle: "italic" }}>
+        <Box
+          sx={{
+            textAlign: "end",
+            fontStyle: "italic",
+          }}
+        >
           <Typography sx={{ mb: 0, lineHeight: 1.5 }}>
             {calendarEvent.location}
           </Typography>

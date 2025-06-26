@@ -1,19 +1,8 @@
 import dayjs from "dayjs";
-import {
-  Box,
-  Divider,
-  Link,
-  styled,
-  ToggleButton,
-  ToggleButtonGroup,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Link, styled, Typography } from "@mui/material";
 import { Headline } from "../components/typography/Headline";
 import { useEffect, useState } from "react";
 import { CalendarCard } from "../components/CalendarCard";
-import { PageImage } from "../components/PageImage";
 
 interface StyledLinkProps {
   content: string;
@@ -113,7 +102,6 @@ export const Calendar = () => {
   const noEvents = <Typography>More events coming soon!</Typography>;
 
   const displayedEvents = activeCalendar === "PAST" ? pastEvents : futureEvents;
-  console.log(displayedEvents);
 
   return (
     <CalendarContainer>

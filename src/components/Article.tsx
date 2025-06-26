@@ -6,7 +6,7 @@ import { ImageDisplayer } from "./ImageDisplayer";
 
 export interface GridContentSection {
   textHead?: string;
-  text: string;
+  text?: string;
   img?: { src: string; credit?: string };
 }
 
@@ -41,9 +41,9 @@ export const Article = ({ detailObject }: ArticleProps) => {
     <SectionArticle>
       <Box>
         {detailObject.sections.map((section, index) => (
-          <React.Fragment key={index + section.text}>
+          <React.Fragment key={index}>
             {section.textHead && <TextHead label={section.textHead} />}
-            <SanitizedParagraph article={section.text} />
+            {section.text && <SanitizedParagraph article={section.text} />}
             {section.img && <ImageDisplayer section={section} />}
           </React.Fragment>
         ))}

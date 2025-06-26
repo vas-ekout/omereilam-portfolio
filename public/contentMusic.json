@@ -97,59 +97,34 @@
       {
         "textHead": "INVASION – EXPLOSION",
         "text": "One of the most challenging pieces in the production, INVASION – EXPLOSION depicts the fight between the LUZIFER & MICHAEL armies. The first is composed of 9 trombone players and the latter of 9 trumpeters. Each army is headed by a singer-leader together with a percussionist and a synth player. All of the warrior-musicians invade into the audience space and engage in a through-composed battle choreography while octophonic electronic music of fighter jets and sound bombs resound throughout the auditorium.",
-        "img": {
-          "src": "music-aus-licht-invasion-explosion-1.jpg"
-        }
+        "img": { "src": "music-aus-licht-invasion-explosion-1.jpg" }
       },
       {
         "text": "During the first instalment of the piece in March 2018 I played the synth part for the MICHAEL army. However, because of my sound projection duties I had to withdraw from this part for the final performances in the Gashouder. By then I was responsible for creating all of the synthesizer sounds for both the percussion and synth players of the two armies. The two synth players operated a ROLI Seaboard while the percussionists used a custom made drum pad. Overall more than 200 sounds of short \"war signals\" had to be created and balanced together with the brass players and electronic music.",
-        "img": {
-          "src": "music-aus-licht-invasion-explosion-2.jpg",
-          "credit": "This is a image credit"
-        }
+        "img": { "src": "music-aus-licht-invasion-explosion-2.jpg" }
       },
       {
         "text": "The most challenging of all however was the finale of the piece, the crazy synthesizer solo SYNTHI-FOU. 130 sounds and extremely virtuosic passages spread across 3 keyboards and two drum pads. It took almost six months of hard (and often painful!) work together with Juan Verdaguer and pianist Ivan Pavlov. The picture below shows the three of us in Kürten working on each and every single sound together with Kathinka Pasveer, Stockhausen's collaborator for almost thirty years.",
-        "img": {
-          "src": "music-aus-licht-kuerten.jpg",
-          "credit": "This is a image credit"
-        }
+        "img": { "src": "music-aus-licht-kuerten.jpg" }
       },
       {
-        "text": "",
-        "img": {
-          "src": "music-aus-licht-synthifou.jpg",
-          "credit": "This is a image credit"
-        }
+        "img": { "src": "music-aus-licht-synthifou.jpg" }
       },
       {
         "textHead": "DER KINDERFÄNGER",
         "text": "In DER KINDERFÄNGER the children of EVA are seduced by a piped piper. They imitate all of his musical figures and finally follow him into the beyond. The ensemble includes of two live synth players (each playing two sets of keyboards), an additional pre-recorded synth, a solo flute player, 18 children (9 sopranos and 9 altos), 1 percussionist with portable instruments, a 4 channel tape and another stereo recording of water-drop sounds.",
-        "img": {
-          "src": "music-aus-licht-kinderfaenger.jpg",
-          "credit": "This is a image credit"
-        }
+        "img": { "src": "music-aus-licht-kinderfaenger.jpg" }
       },
       {
         "text": "An entirely different approach had to be taken here since the piece was last performed as part of the MONTAG aus LICHT opera when it premiered in 1988. Hence, all of the sounds and synthesizers that were used back then were by now obsolete and had to be reconstructed. It is the first time the piece was performed since the original production and thus required a painstaking consultation with the original recordings, synthesizer cartridges, scores, correspondence with the original players and the Stockhausen Foundation, and an long process of tweaking and balancing the sounds during the rehearsals. In the end the new sounds had to mix well with the old ones while still sounding crystal clear and modern.",
-        "img": {
-          "src": "music-aus-licht-kinderfaenger-probe.jpg",
-          "credit": "This is a image credit"
-        }
+        "img": { "src": "music-aus-licht-kinderfaenger-probe.jpg" }
       },
       {
         "text": "Since I was responsible for both the synthesizer reconstruction and for the sound projection I had a lot of artistic leeway in determining how everything will eventually sound. For example, the piece ends with a section called ENTFÜHRUNG where the abducted children march and sing the EVA formula while the synthesizers play pointillistic sounds interspersed with bird calls. Many months before the actual performances I created those timbres based on Stockhausen's description in the score as sounding initially like antique cymbals and gradually becoming more synthetic in nature. I also hand-picked samples of bird calls that mixed well together with the pointillistic notes. Finally, during the rehearsals in The Hague and Amsterdam I used SPAT Revolution (bottom left picture) and constructed a LEMUR controller for the iPad (bottom right picture) so that I was able to move all the sounds in circular trajectories within the space of the auditorium which was gradually becoming more echoic and distant as the children disappeared.",
-        "img": {
-          "src": "music-aus-licht-spat.jpg",
-          "credit": "This is a image credit"
-        }
+        "img": { "src": "music-aus-licht-spat.jpg" }
       },
       {
-        "text": "",
-        "img": {
-          "src": "music-aus-licht-lemur.jpg",
-          "credit": "This is a image credit"
-        }
+        "img": { "src": "music-aus-licht-lemur.jpg" }
       },
       {
         "textHead": "ENGEL PROZESSIONEN",
@@ -163,10 +138,99 @@
       },
       {
         "text": "The picture below shows the end of the piece, where the angel groups approach the center of the the hall to sing the final tutti. The mixing console can be seen left of center, operated by Juan Verdaguer and myself.",
-        "img": {
-          "src": "music-aus-licht-engel-prozessionen.jpg",
-          "credit": "This is a image credit"
-        }
+        "img": { "src": "music-aus-licht-engel-prozessionen.jpg" }
+      }
+    ]
+  },
+  {
+    "title": "TIERKREIS",
+    "mainImg": "music-tierkreis-main.jpg",
+    "sections": [
+      {
+        "text": "This work concerns the realization of an electronic music version of the piece TIERKREIS composed by Karlheinz Stockhausen in 1974. TIERKREIS is a collection of twelve short melodies belonging to the twelve zodiac signs wherein each melody possesses a unique melodic and rhythmic character. So far various arrangements of the composition were published, some by the composer himself, but none of them were made especially for electronic music. The nature of the melodies, namely their focus on a sequence of discreet pitches and rhythmical elements, makes them particularly susceptible to electronic music transformations such as timbral synthesis and spatial movements. The aesthetic choices for this realization were guided by and meant to convey the spirit of the composer.",
+        "img": { "src": "music-tierkreis-cycle.jpg" }
+      },
+      {
+        "text": "In 1974 Karlheinz Stockhausen composed TIERKREIS, a cycle of 12 melodies representing the 12 signs of the zodiac. Originally written for music boxes, TIERKREIS forms the basis to much of Stockhausen's later works, most notably in the case of SIRIUS (1976)."
+      },
+      {
+        "text": "The nature of TIERKREIS is unique in the sense that each melody on the one hand has its distinctive characteristics while on the other hand relates to the cycle as a whole, thus achieving a strong compositional unity. This relationship can be more easily understood when examining the diagram above. The first thing to notice is that each melody is based on one important note, called the central tone of the melody. These tones follow the chromatic 12 tones scale, beginning on D# (Aquarius) and ending with D (Capricorn). The tempi also follow a chromatic scale (this time not according to the order of the cycle), with Libra being the slowest at ♩= 71 bpm and Pisces the fastest at ♩= 134 bpm. The two smaller note-heads on each staff represent the highest and lowest tones of each melody, i.e. its range. The durations of each melody also form a 12-member series with a rather narrow range of durations, from 26.66 seconds for Libra to 30.4 seconds for Pisces.",
+        "img": { "src": "music-tierkreis-notes.jpg" }
+      },
+      {
+        "text": "Zooming in from the general diagram the figure above shows the series of notes that comprise each melody of TIERKREIS. The central tone is always the first in the series, while the others are called main tones. Each melody utilizes all 12 notes of the chromatic scale while some also include repetition of notes, making the series longer. By examining the different series one can already recognize differences in tendencies. For example, the series of Aquarius is first ascending and then descending in an almost chromatic fashion. On the other hand the melody of Libra begins in the middle range with small intervals that grow larger in the middle and smaller again towards the end."
+      },
+      {
+        "text": "To maintain the special relationship discussed above I decided to come up with a few overarching elements that govern the construction of the entire piece. From the perspective of timbral synthesis I decided to limit myself to two synthesis methods which I termed Octaver and Impulser, that repeat in various forms throughout the cycle. I will discuss these two methods in detail in the following chapters. To complement these timbres each melody also contains unique sounds that are identified with it alone and do not occur elsewhere, as in the case of the Tuba in Taurus or the two singers in Pisces. Finally, the sounds of the four classical elements (Air, Fire, Water and Earth) can be heard during several moments in the piece which represent the connections of the zodiac signs to the seasons and triplicities."
+      },
+      {
+        "text": "With respect to the spatial organization of the sounds a unity is achieved in the form of spatial trajectories within a cubical space, where each melody follows the geometrical path of its corresponding star constellation (as can be seen below). This cube is then projected onto the space of the concert hall. As mentioned above, each of the twelve melodies has a central tone which corresponds to one note of the chromatic scale. This tone is mapped to one of the stars in the constellation and localised to the position of the constellation in the zodiac cycle. For example, the central tone for the Pisces melody is E, located at -30°. The central tone for the Aries melody is F, located at 0°, etc. Once the central tone is localised the orientation of the other stars in the constellation is determined according to their geometrical relation to the chosen star.",
+        "img": { "src": "music-tierkreis-constellations-cube.jpg" }
+      },
+      {
+        "text": "At the moment of writing only half of the cycle was completed and performed during my Final Exam Concert in The Institute of Sonology, The Royal Conservatoire, The Hague, in June 2017."
+      },
+      {
+        "text": "A stereo version of the pieces can be found on <a href='https://soundcloud.com/omereilam/sets/tierkreis?si=b1fcb057c8724a54b5301e9ae4fa7bd4&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'>Soundcloud</a>."
+      },
+      {
+        "text": "My entire Master's thesis entitled 'Karlheinz Stockhausen's TIERKREIS: An arrangement for electronic music, instruments and voices' can be downloaded from here."
+      }
+    ]
+  },
+  {
+    "title": "RESONATE X STOCKHAUSEN",
+    "mainImg": "music-resonate-suit.jpg",
+    "sections": [
+      {
+        "text": "The sense of touch has always played a major role in music. Whether it comes from the vibration of a violin string or the surface of a piano key, physical feedback has led musicians to develop a tight connection with their instrument, some describing it as ‘an extension of their body’. While progress has been made in electronic music with regards to its sonic characteristics its manifestation in the physical realm remain extremely primitive. This project aimed to explore the creative potential of designing an immersive, combined auditory-tactile experience of music as an extension of the traditional concert setup."
+      },
+      {
+        "text": "We envisioned the construction of a dedicated concert space where the audience will be listening to electronic music played through a quadrophonic loudspeaker system, as well as experiencing the music through vibrations in their bodies."
+      },
+      {
+        "text": "For the realisation of the above we used the Resonate suit (resonate.nu). This custom-built wearable contains ten transducers, four on the front and six on the back. The transducers are positioned in such a way that certain frequencies are felt in locations where they exert the most amount of impact. The suit was designed in collaboration with fashion collective Das Leben am Haverkamp and won several prizes, including but not limited to: Grant for Major Creative Talent, Municipality of The Hague, 2014 | Public’s Choice Award Media Art Friesland, 2014. Until today Resonate has been experienced at the following locations: Big Improvement Day, Scheveningen, 2014 | Media Art Festival, Friesland, 2014 | Night of Art and Knowledge, Leiden, 2015 | TodaysArt, The Hague, 2015."
+      },
+      {
+        "text": "Apart from the suit, the other important is the space. By eliminating other stimuli the listener can be completely engulfed in the music experience. For the purpose of the project 6 individuals at a time were placed in one of the studios for electronic music in The Institute of Sonology. The lights were turned off and no interference from the outside world was allowed."
+      },
+      {
+        "text": "The music which was selected for the project is the piece KONTAKTE by Karlheinz Stockhausen. We chose this piece specifically because of its strong emphasis on composed spatial trajectories of sound as well as its overall integration of space as a main feature of the compositional process. When experienced through the skin as well as the ears, the conceptions of external and internal space unite in a one-of a-kind, immersive experience."
+      },
+      {
+        "text": "A short video documentation is available <a href='https://vimeo.com/171421774'>here</a>.",
+        "img": { "src": "music-resonate-concert.jpg" }
+      }
+    ]
+  },
+  {
+    "title": "The Stolen Child",
+    "mainImg": "music-stolen-child-figure.jpg",
+    "sections": [
+      {
+        "text": "The Stolen Child is a crossover between fixed media and live theatrical performance. It takes its name from a poem by W. B. Yeats which entails the story of a boy seduced by dark forces. In the context of the piece this happens through a scientific experiment on stage, where one performer acts as the test subject and the other as the experimenter, together recreating Stanley Milgram's famous Obedience experiment from the 60s. In the original experiment a \"teacher\" was supposedly giving electric shocks to a \"student\" in order to better perform in a memory task. In the performance case the experimenter is trying to subdue the test subject with the use of electric shock. This process as well as the resistance of the test subject are also directly depicted in sound."
+      },
+      {
+        "text": "The piece can be performed either with or without staging. In the latter case the fixed media should be played in a large and completely dark auditorium. The duration of the piece is ca. 10 minutes and 10 seconds."
+      },
+      {
+        "text": "The first performance of the piece took place on March 4, 2016 in La Casa Encendida, Madrid, during the 9th instalment of the IN-SONORA electronic music festival, with Adria Juan playing the Test Subject and Daniel Portillo the Experimenter."
+      },
+      {
+        "text": "The second performance took place on March 8, 2016 in The Royal Conservatory of The Hague, as part of the CASS concert series, with Grey Timmers playing the Test Subject and Eduard Figueres the Experimenter."
+      },
+      {
+        "text": "The pictures below were taken during the performance in The Hague. A video documenting the performance is available on <a href='https://youtu.be/BUaw8SU42aI'>YouTube</a> and a stereo version of the entire piece is available on <a href='https://on.soundcloud.com/rC2rw0lkjbhc77BGqZ'>Soundcloud</a>.",
+        "img": { "src": "music-stolen-child-experiment-1.jpg" }
+      },
+      {
+        "img": { "src": "music-stolen-child-experiment-2.jpg" }
+      },
+      {
+        "img": { "src": "music-stolen-child-lever.jpg" }
+      },
+      {
+        "img": { "src": "music-stolen-child-shock.jpg" }
       }
     ]
   }

@@ -1,15 +1,13 @@
 import { slugify } from "../utils/slugify";
 import { Article, GridContentProps } from "../components/Article";
 import { Headline } from "../components/typography/Headline";
-import {
-  Box,
-  styled,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { SectionGrid } from "../components/SectionGrid";
+import { SectionGridWrapper } from "../components/SectionGridWrapper";
+import { SectionGridImage } from "../components/SectionGridImage";
+import { SectionGridTitle } from "../components/SectionGridTitle";
+import { SectionGridItemWrapper } from "../components/SectionGridItemWrapper";
 
 export const Music = () => {
   const [detailObject, setDetailObject] = useState<any | null>(null);
@@ -17,9 +15,6 @@ export const Music = () => {
 
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     fetch("/contentMusic.json")
@@ -46,54 +41,13 @@ export const Music = () => {
     navigate(-1);
   };
 
-  const MusicContainer = styled("div")(() => ({
-    display: "flex",
-    flexDirection: "column",
-    gap: isSmallScreen ? "32px" : "45px",
-  }));
-
-  const SectionGrid = styled("div")(() => ({
-    display: "grid",
-    gap: 45,
-    gridTemplateColumns: "repeat(auto-fit, minmax(16rem, 1fr))",
-  }));
-
-  const StyledImage = styled("img")(() => ({
-    maxWidth: "100%",
-    width: "100%",
-    height: "100%",
-    aspectRatio: "1 / 1",
-    objectFit: "cover",
-    cursor: "pointer",
-    transition: theme.transitions.create(["transform"], {
-      duration: 800,
-      easing: theme.transitions.easing.easeOut,
-    }),
-    "&:hover": {
-      transform: "scale(1.05)",
-      zIndex: 1,
-    },
-  }));
-
-  const StyledTitle = styled(Typography)(({ theme }) => ({
-    textAlign: "center",
-    fontWeight: "600",
-    backgroundColor: theme.palette.background.paper,
-    zIndex: 2,
-  }));
-
-  const ItemContainer = styled(Box)(({ theme }) => ({
-    overflow: "hidden",
-    display: "flex",
-    flexDirection: "column",
-  }));
-
   return (
-    <MusicContainer>
+    <SectionGridWrapper>
       <Headline
         label="Music"
         subLabel={detailObject?.title}
-        onClick={handleCloseDetailView}
+        backButtonOnClick={handleCloseDetailView}
+        routerLinkTo={detailObject?.title && "/music"}
       />
       <SectionGrid>
         {detailObject ? (
@@ -102,23 +56,23 @@ export const Music = () => {
           contentMusic?.map(
             (item, index) =>
               item.mainImg && (
-                <ItemContainer
+                <SectionGridItemWrapper
                   key={index}
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                     handleOpenDetailView(item);
                   }}
                 >
-                  <StyledImage
+                  <SectionGridImage
                     src={`/images/${item.mainImg}`}
                     alt={`Album cover of ${item.title}`}
                   />
-                  <StyledTitle>{item.title}</StyledTitle>
-                </ItemContainer>
+                  <SectionGridTitle>{item.title}</SectionGridTitle>
+                </SectionGridItemWrapper>
               )
           )
         )}
       </SectionGrid>
-    </MusicContainer>
+    </SectionGridWrapper>
   );
 };

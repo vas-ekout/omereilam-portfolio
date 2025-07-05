@@ -14,7 +14,6 @@ interface CalendarCardProps {
 
 export const CalendarCard = ({ calendarEvent }: CalendarCardProps) => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box

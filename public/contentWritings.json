@@ -1,7 +1,20 @@
 [
-  { "substackLink": "https://omereilam.substack.com/p/the-dove-of-peace" },
-  { "substackLink": "https://omereilam.substack.com/p/israel" },
   {
-    "substackLink": "https://omereilam.substack.com/p/on-earthly-and-cosmic-music"
+    "url": "https://omereilam.substack.com/p/what-if-we-stay-here",
+    "title": "What if we stay here",
+    "description": "What if we stay here...<br>Floating atop the abyss<br>Surrounded by beasts of prey.<br>What if we do not look back…<br>To former times of laughter and pain<br>Those times are gone now.",
+    "imageUrl": "https://substackcdn.com/image/fetch/$s_!dVyd!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf6999c4-ee92-4492-85ab-a46e627759e1_630x360.jpeg"
+  },
+  {
+    "url": "https://omereilam.substack.com/p/the-dove-of-peace",
+    "title": "The Dove of Peace",
+    "description": "Yesterday I participated in a meeting with Faten, a Christian Palestinian woman living in Bethlehem. The meeting was organized by Gilda Bartel from Das Goetheanum magazine. It all started a couple …",
+    "imageUrl": "https://substackcdn.com/image/fetch/$s_!rXso!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7d255a87-6509-4901-a986-1bb9964bd392_1344x896.jpeg"
+  },
+  {
+    "url": "https://omereilam.substack.com/p/israel",
+    "title": "Israel",
+    "description": "He was just a child Born of necessity Carrying centuries-old scars So deep He wouldn't recognize Himself without them. Old wounds They tend to itch Inviting hungry nails Scraping an all too sensitive …",
+    "imageUrl": "https://substackcdn.com/image/fetch/$s_!LF2R!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc95973a6-ea02-4b82-9f3c-edaf109a494d_3840x2400.jpeg"
   }
 ]

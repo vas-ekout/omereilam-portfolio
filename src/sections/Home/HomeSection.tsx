@@ -50,7 +50,10 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
 
   return (
     <StyledHomeSection>
-      <Headline label={section.label} />
+      <Headline
+        label={section.label}
+        routerLinkTo={section.label.toLowerCase()}
+      />
       {section.articles.map((article, index) => (
         <StyledSectionArticle key={index}>
           <TextBox>

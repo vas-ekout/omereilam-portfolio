@@ -12,10 +12,16 @@ import { Link as RouterLink } from "react-router-dom";
 interface HeadlineProps {
   label?: string;
   subLabel?: string;
-  onClick?: () => void;
+  backButtonOnClick?: () => void;
+  routerLinkTo?: string;
 }
 
-export const Headline = ({ label, subLabel, onClick }: HeadlineProps) => {
+export const Headline = ({
+  label,
+  subLabel,
+  backButtonOnClick,
+  routerLinkTo,
+}: HeadlineProps) => {
   const typedSublabel = useTypewriter(subLabel);
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -54,9 +60,9 @@ export const Headline = ({ label, subLabel, onClick }: HeadlineProps) => {
         }}
       >
         <RouterLink
-          to="/music"
+          to={routerLinkTo || ""}
           style={{
-            cursor: subLabel ? "pointer" : "auto",
+            cursor: routerLinkTo ? "pointer" : "auto",
             textDecoration: "none",
             color: "inherit",
           }}
@@ -78,7 +84,10 @@ export const Headline = ({ label, subLabel, onClick }: HeadlineProps) => {
             <Box sx={{ fontWeight: 300, ml: isSmallScreen ? 0 : 2 }}>
               {subLabel.slice(0, typedSublabel)}
             </Box>
-            <BackButton onClick={onClick} sx={{ mb: 0.5, ml: "auto", mr: 0 }}>
+            <BackButton
+              onClick={backButtonOnClick}
+              sx={{ mb: 0.5, ml: "auto", mr: 0 }}
+            >
               <WestIcon />
             </BackButton>
           </Box>

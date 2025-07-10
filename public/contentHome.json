@@ -70,14 +70,16 @@
           "article": [
             "What if we stay here...<br/>Floating atop the abyss<br />Surrounded by beasts of prey"
           ],
-          "img": "writings-what-if-we-stay-01.jpg"
+          "img": "writings-what-if-we-stay-01.jpg",
+          "readMoreUrl": "https://omereilam.substack.com/p/what-if-we-stay-here"
         },
         {
           "headline": "The Dove of Peace",
           "article": [
             "Yesterday I participated in a meeting with Faten, a Christian Palestinian woman living in Bethlehem. The meeting was organized by Gilda Bartel from Das Goetheanum magazine. It all started a couple of months ago when I sent my poem <i>Israel</i> to the editorial team of the magazine."
           ],
-          "img": "writings-dove-of-peace-01.jpg"
+          "img": "writings-dove-of-peace-01.jpg",
+          "readMoreUrl": "https://omereilam.substack.com/p/the-dove-of-peace"
         }
       ]
     }

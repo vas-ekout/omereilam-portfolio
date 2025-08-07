@@ -1,7 +1,8 @@
 import { Box, Dialog, IconButton, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
 import { GridContentSection } from "./Article";
+import { imageHoverEffect } from "../utils/imageHoverEffect";
+import { ImageModal } from "./gallery/ImageModal";
 
 interface ImageDisplayerProps {
   section: GridContentSection;
@@ -26,13 +27,17 @@ export const ImageDisplayer = ({ section }: ImageDisplayerProps) => {
             duration: 200,
             easing: theme.transitions.easing.easeOut,
           }),
-          "&:hover": {
-            filter: "grayscale(100%) brightness(0.6)",
-          },
+          "&:hover": { ...imageHoverEffect },
         }}
         onClick={() => setIsOpen(true)}
       />
-      <Dialog
+      <ImageModal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        imgSrc={`/images/${section.img?.src}`}
+        imgCredit={section.img?.credit}
+      />
+      {/* <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
         maxWidth={false}
@@ -93,7 +98,7 @@ export const ImageDisplayer = ({ section }: ImageDisplayerProps) => {
             }}
           />
         </Box>
-      </Dialog>
+      </Dialog> */}
     </>
   );
 };

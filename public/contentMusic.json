@@ -221,7 +221,9 @@
       },
       {
         "text": "The pictures below were taken during the performance in The Hague. A video documenting the performance is available on <a href='https://youtu.be/BUaw8SU42aI'>YouTube</a> and a stereo version of the entire piece is available on <a href='https://on.soundcloud.com/rC2rw0lkjbhc77BGqZ'>Soundcloud</a>.",
-        "img": { "src": "music-stolen-child-experiment-1.jpg" }
+        "img": {
+          "src": "music-stolen-child-experiment-1.jpg"
+        }
       },
       {
         "img": { "src": "music-stolen-child-experiment-2.jpg" }
@@ -232,6 +234,66 @@
       {
         "img": { "src": "music-stolen-child-shock.jpg" }
       }
-    ]
+    ],
+    "gallery": {
+      "title": "Fun Times with Camels",
+      "imgs": [
+        {
+          "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/4/43/07._Camel_Profile%2C_near_Silverton%2C_NSW%2C_07.07.2007.jpg",
+          "alt": "Camel",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://cdn.britannica.com/94/152294-050-92FE0C83/Arabian-dromedary-camel.jpg",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://cdn.britannica.com/57/7057-050-33CEB562/Bactrian-camel.jpg",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://www.awsfzoo.com/media/DSC02266-scaled.jpg",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://www.awsfzoo.com/media/DSC01156-1024x683.jpg",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/2011_Trampeltier_1528.JPG/960px-2011_Trampeltier_1528.JPG",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://steppenstrolch.de/web/image/110738-23c2e058/steppenstrolch-kamelbilder-257.jpg",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://animals.sandiegozoo.org/sites/default/files/inline-images/camel_dromedary.jpg",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://images.unsplash.com/photo-1553983658-0d7afeb5c53f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FtZWx8ZW58MHx8MHx8fDA%3D",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://chazoo.s3.amazonaws.com/Camel-verticle.JPG",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        },
+        {
+          "imgSrc": "https://i.pinimg.com/736x/46/03/8f/46038f61f8e3e730a426c90b849c46f6.jpg",
+          "alt": "Cowboy",
+          "credit": "Camel at Hambach, photo by John Doe"
+        }
+      ]
+    }
   }
 ]

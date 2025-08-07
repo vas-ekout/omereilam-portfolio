@@ -3,6 +3,7 @@ import { SanitizedParagraph } from "./typography/SanitizedParagraph";
 import { TextHead } from "./typography/TextHead";
 import React from "react";
 import { ImageDisplayer } from "./ImageDisplayer";
+import { Gallery, GalleryProps } from "./gallery/Gallery";
 
 export interface GridContentSection {
   textHead?: string;
@@ -15,7 +16,7 @@ export interface GridContentProps {
   mainImg?: string;
   sections: GridContentSection[];
   credits?: string[];
-  imgs?: string[];
+  gallery?: GalleryProps;
   soundcloudSrc?: string[];
   youtubeSrc?: string[];
 }
@@ -47,19 +48,29 @@ export const Article = ({ detailObject }: ArticleProps) => {
             {section.img && <ImageDisplayer section={section} />}
           </React.Fragment>
         ))}
-        {detailObject.credits &&
-          detailObject.credits.map((credit, index) => (
-            <SanitizedParagraph
-              key={index}
-              article={credit}
-              sx={{
-                fontWeight: 600,
-                fontSize: "1rem",
-                lineHeight: "1.875rem",
-                mb: 0,
-              }}
-            />
-          ))}
+
+        {detailObject.credits && (
+          <Box sx={{ mb: 2 }}>
+            {detailObject.credits.map((credit, index) => (
+              <SanitizedParagraph
+                key={index}
+                article={credit}
+                sx={{
+                  fontWeight: 600,
+                  fontSize: "1rem",
+                  lineHeight: "1.875rem",
+                  mb: 0,
+                }}
+              />
+            ))}
+          </Box>
+        )}
+        {detailObject.gallery && (
+          <Gallery
+            title={detailObject.gallery?.title}
+            imgs={detailObject.gallery?.imgs}
+          />
+        )}
         <Box sx={{ display: "flex", flexDirection: "column", gap: 8, mt: 10 }}>
           {detailObject.soundcloudSrc &&
             detailObject.soundcloudSrc.map((src, index) => (

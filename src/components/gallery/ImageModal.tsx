@@ -1,48 +1,126 @@
 import {
+  alpha,
   Box,
   Dialog,
   DialogContent,
   IconButton,
+  styled,
   Typography,
   useTheme,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowBack from "@mui/icons-material/ArrowBack";
+import ArrowForward from "@mui/icons-material/ArrowForward";
 
 interface ImageModalProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   imgCredit?: string;
   imgSrc?: string;
+  onPrevious?: () => void;
+  onNext?: () => void;
+  currentIndex?: number;
+  totalImages?: number;
 }
+
+const backgroundColorIcon = "rgba(0, 0, 0, 0.15)";
+const backgroundColorIconHover = "rgba(0, 0, 0, 0.25)";
+
+const StyledIconButton = styled(IconButton)(({ theme }) => ({
+  position: "absolute",
+  zIndex: 1,
+  backgroundColor: backgroundColorIcon,
+  "&:hover": {
+    backgroundColor: backgroundColorIconHover,
+  },
+}));
 
 export const ImageModal = ({
   isOpen,
   setIsOpen,
   imgCredit,
   imgSrc,
+  onPrevious,
+  onNext,
+  currentIndex = 0,
+  totalImages = 0,
 }: ImageModalProps) => {
   const theme = useTheme();
+  const showNavigation = totalImages > 1;
 
   return (
     <Dialog
+      fullScreen
       open={isOpen}
       onClose={() => setIsOpen(false)}
       maxWidth={false}
-      slotProps={{
-        backdrop: { sx: { background: theme.palette.background.overlay } },
+      PaperProps={{
+        sx: {
+          backgroundColor: alpha(
+            theme.palette.background.overlay as string,
+            0.9
+          ),
+        },
       }}
     >
-      <IconButton
+      <StyledIconButton
         size="small"
-        sx={{
-          position: "absolute",
-          top: 8,
-          right: 8,
-        }}
+        sx={{ top: 8, right: 8 }}
         onClick={() => setIsOpen(false)}
       >
         <CloseIcon fontSize="inherit" sx={{ color: "white" }} />
-      </IconButton>
+      </StyledIconButton>
+
+      {/* Navigation arrows */}
+      {showNavigation && (
+        <>
+          <StyledIconButton
+            size="small"
+            sx={{
+              left: 8,
+              top: "50%",
+              transform: "translateY(-50%)",
+            }}
+            onClick={onPrevious}
+          >
+            <ArrowBack fontSize="inherit" sx={{ color: "white" }} />
+          </StyledIconButton>
+          <StyledIconButton
+            size="small"
+            sx={{
+              right: 8,
+              top: "50%",
+              transform: "translateY(-50%)",
+            }}
+            onClick={onNext}
+          >
+            <ArrowForward fontSize="inherit" sx={{ color: "white" }} />
+          </StyledIconButton>
+        </>
+      )}
+
+      {/* Image counter */}
+      {/* {showNavigation && (
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: 72,
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 1,
+            backgroundColor: backgroundColorIconHover,
+            borderRadius: 1,
+            px: 2,
+          }}
+        >
+          <Typography
+            sx={{ fontSize: 12, fontWeight: 700, mb: 0, color: "white" }}
+          >
+            {currentIndex + 1} / {totalImages}
+          </Typography>
+        </Box>
+      )} */}
+
       {imgCredit && (
         <Box
           sx={{
@@ -87,7 +165,7 @@ export const ImageModal = ({
             height: "auto",
             objectFit: "contain",
             maxWidth: "100%",
-            maxHeight: "96vh",
+            maxHeight: "100%",
           }}
         />
       </DialogContent>

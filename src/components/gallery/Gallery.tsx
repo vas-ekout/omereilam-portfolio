@@ -1,7 +1,7 @@
 import { Box, styled } from "@mui/material";
 import { ImageModal } from "./ImageModal";
 import { GalleryItem } from "./GalleryItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TextHead } from "../typography/TextHead";
 
 const GalleryWrapper = styled(Box)(({ theme }) => ({
@@ -37,20 +37,54 @@ export interface GalleryProps {
 
 export const Gallery = ({ title, imgs }: GalleryProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [largeImage, setLargeImage] = useState<ImageProps>();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const openImg = (item: ImageProps) => {
+    const index = imgs.findIndex((img) => img.imgSrc === item.imgSrc);
+    setCurrentImageIndex(index);
     setIsOpen(true);
-    setLargeImage(item);
   };
+
+  const goToPrevImage = () => {
+    setCurrentImageIndex((prev) => (prev === 0 ? imgs.length - 1 : prev - 1));
+  };
+
+  const goToNextImage = () => {
+    setCurrentImageIndex((prev) => (prev === imgs.length - 1 ? 0 : prev + 1));
+  };
+
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (!isOpen) return;
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        goToPrevImage();
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        goToNextImage();
+      } else if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+    return () => document.removeEventListener("keydown", handleKeyPress);
+  }, [isOpen, imgs.length]);
+
+  const currentImage = imgs[currentImageIndex];
 
   return (
     <>
       <ImageModal
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        imgSrc={largeImage?.imgSrc}
-        imgCredit={largeImage?.credit}
+        imgSrc={currentImage.imgSrc}
+        imgCredit={currentImage?.credit}
+        onPrevious={goToPrevImage}
+        onNext={goToNextImage}
+        currentIndex={currentImageIndex}
+        totalImages={imgs.length}
       />
       {title && <TextHead label={title} />}
       <GalleryWrapper>

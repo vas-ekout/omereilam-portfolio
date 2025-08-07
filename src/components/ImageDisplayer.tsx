@@ -37,68 +37,6 @@ export const ImageDisplayer = ({ section }: ImageDisplayerProps) => {
         imgSrc={`/images/${section.img?.src}`}
         imgCredit={section.img?.credit}
       />
-      {/* <Dialog
-        open={isOpen}
-        onClose={() => setIsOpen(false)}
-        maxWidth={false}
-        slotProps={{
-          backdrop: { sx: { background: theme.palette.background.overlay } },
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <IconButton
-            size="small"
-            sx={{
-              position: "absolute",
-              top: 8,
-              right: 8,
-            }}
-            onClick={() => setIsOpen(false)}
-          >
-            <CloseIcon fontSize="inherit" sx={{ color: "white" }} />
-          </IconButton>
-          {section.img?.credit && (
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "100%",
-                position: "absolute",
-                bottom: 0,
-                background: theme.palette.background.overlay,
-              }}
-            >
-              <Typography
-                sx={{
-                  m: 2,
-                  fontSize: 16,
-                  lineHeight: 1.5,
-                  textWrap: "balance",
-                }}
-                textAlign="center"
-              >
-                {section.img?.credit}
-              </Typography>
-            </Box>
-          )}{" "}
-          <img
-            src={`/images/${section.img?.src}`}
-            alt="Fullscreen"
-            style={{
-              maxWidth: "100%",
-              maxHeight: "100%",
-              objectFit: "contain",
-            }}
-          />
-        </Box>
-      </Dialog> */}
     </>
   );
 };

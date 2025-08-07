@@ -159,7 +159,7 @@ export const ImageModal = ({
         <Box
           component="img"
           src={imgSrc}
-          alt="Fullscreen"
+          alt="Fullscreen Image"
           sx={{
             width: "auto",
             height: "auto",

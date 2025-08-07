@@ -4,7 +4,7 @@ import { GalleryItem } from "./GalleryItem";
 import { useState, useEffect } from "react";
 import { TextHead } from "../typography/TextHead";
 
-const GalleryWrapper = styled(Box)(({ theme }) => ({
+const GalleryWrapperOld = styled(Box)(({ theme }) => ({
   WebkitColumnCount: 1,
   MozColumnCount: 1,
   columnCount: 1,
@@ -20,6 +20,12 @@ const GalleryWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 
+const GalleryWrapper = styled(Box)(({ theme }) => ({
+  display: "grid",
+  gap: 16,
+  gridTemplateColumns: "repeat(auto-fit, minmax(14rem, 1fr))",
+}));
+
 export interface ImageProps {
   imgSrc: string;
   alt?: string;
@@ -30,7 +36,6 @@ export interface GalleryProps {
   title?: string;
   imgs: {
     imgSrc: string;
-    alt?: string;
     credit?: string;
   }[];
 }
@@ -88,11 +93,12 @@ export const Gallery = ({ title, imgs }: GalleryProps) => {
       />
       {title && <TextHead label={title} />}
       <GalleryWrapper>
-        {imgs.map((item) => {
+        {imgs.map((item, index) => {
           return (
             <GalleryItem
               key={item.imgSrc}
               imgSrc={item.imgSrc}
+              alt={`${title} – Gallery Image ${index + 1}`}
               onClick={() => openImg(item)}
             />
           );

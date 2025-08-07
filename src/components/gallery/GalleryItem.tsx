@@ -3,22 +3,39 @@ import { imageHoverEffect } from "../../utils/imageHoverEffect";
 
 interface GalleryItemProps {
   imgSrc: string;
+  alt: string;
   onClick?: () => void;
 }
 
-export const GalleryItem = ({ imgSrc, onClick }: GalleryItemProps) => {
+export const GalleryItem = ({ imgSrc, alt, onClick }: GalleryItemProps) => {
   return (
     <Box
-      key={imgSrc}
+      onClick={onClick}
       sx={{
+        position: "relative",
+        width: "100%",
+        aspectRatio: "1 / 1",
+        overflow: "hidden",
         WebkitTransition: "all 350ms ease",
         transition: "all 350ms ease",
         cursor: "pointer",
         "&:hover": { ...imageHoverEffect },
       }}
-      onClick={onClick}
     >
-      <Box component="img" src={imgSrc} sx={{ width: "100%" }} />
+      <Box
+        component="img"
+        src={imgSrc}
+        alt={alt}
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          display: "block",
+        }}
+      />
     </Box>
   );
 };

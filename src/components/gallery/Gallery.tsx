@@ -84,7 +84,7 @@ export const Gallery = ({ title, imgs }: GalleryProps) => {
       <ImageModal
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        imgSrc={currentImage.imgSrc}
+        imgSrc={`/images/${currentImage.imgSrc}`}
         imgCredit={currentImage?.credit}
         onPrevious={goToPrevImage}
         onNext={goToNextImage}

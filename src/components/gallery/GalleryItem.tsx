@@ -24,7 +24,7 @@ export const GalleryItem = ({ imgSrc, alt, onClick }: GalleryItemProps) => {
     >
       <Box
         component="img"
-        src={imgSrc}
+        src={`/images/${imgSrc}`}
         alt={alt}
         sx={{
           position: "absolute",

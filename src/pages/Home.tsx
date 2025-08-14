@@ -1,5 +1,6 @@
 import { HomeSection, HomeSectionProps } from "../sections/Home/HomeSection";
 import { useEffect, useState } from "react";
+import { Calendar } from "./Calendar";
 
 export const Home = () => {
   const [contentHome, setContentHome] = useState<HomeSectionProps[]>();
@@ -20,6 +21,7 @@ export const Home = () => {
       {contentHome?.map((section, index) => (
         <HomeSection key={index} section={section.section} />
       ))}
+      <Calendar isHomePage />
     </>
   );
 };

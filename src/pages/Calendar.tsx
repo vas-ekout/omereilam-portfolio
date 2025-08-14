@@ -65,7 +65,11 @@ export interface ExtendedCalendarEventProps extends ContentCalendarProps {
   dateTime: dayjs.Dayjs;
 }
 
-export const Calendar = () => {
+interface CalendarProps {
+  isHomePage?: boolean;
+}
+
+export const Calendar = ({ isHomePage }: CalendarProps) => {
   const [calendarEvents, setCalendarEvents] =
     useState<ExtendedCalendarEventProps[]>();
 
@@ -107,7 +111,7 @@ export const Calendar = () => {
     <CalendarContainer>
       <Headline label={"Calendar"} />
       <SectionArticle>
-        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+        <Box sx={{ width: { xs: "100%", md: isHomePage ? "100%" : "50%" } }}>
           <Box sx={{ display: "flex", gap: 1.5 }}>
             <StyledLink
               variant="body2"
@@ -133,15 +137,17 @@ export const Calendar = () => {
                 <CalendarCard key={index} calendarEvent={item} />
               ))}
         </Box>
-        <Box
-          component="img"
-          src="/images/calendar-01.jpg"
-          sx={{
-            objectFit: "cover",
-            width: { xs: "100%", md: "50%" },
-            height: { xs: "300px", md: "fit-content" },
-          }}
-        />
+        {!isHomePage && (
+          <Box
+            component="img"
+            src="/images/calendar-01.jpg"
+            sx={{
+              objectFit: "cover",
+              width: { xs: "100%", md: "50%" },
+              height: { xs: "300px", md: "fit-content" },
+            }}
+          />
+        )}
       </SectionArticle>
     </CalendarContainer>
   );

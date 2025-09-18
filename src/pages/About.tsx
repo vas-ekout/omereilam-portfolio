@@ -49,7 +49,9 @@ export const About = () => {
       <Headline label="About" />
       <SectionArticle>
         <Box>
-          {contentAbout?.article.map((p) => <SanitizedParagraph article={p} />)}
+          {contentAbout?.article.map((p, index) => (
+            <SanitizedParagraph article={p} key={index} />
+          ))}
         </Box>
         {contentAbout?.img && (
           <PageImage

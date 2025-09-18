@@ -66,8 +66,8 @@ export const HomeSection = ({ section }: HomeSectionProps) => {
                   }
                 />
               )}
-              {article.article.map((paragraph) => (
-                <SanitizedParagraph article={paragraph} />
+              {article.article.map((paragraph, index) => (
+                <SanitizedParagraph article={paragraph} key={index} />
               ))}
             </Box>
             <ReadMoreSubline

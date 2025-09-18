@@ -9,10 +9,8 @@ import {
   IconButton,
   styled,
   SvgIcon,
-  Tooltip,
   useMediaQuery,
   useTheme,
-  Zoom,
 } from "@mui/material";
 import { SocialMediaIconButton } from "./SocialMediaIconButton";
 

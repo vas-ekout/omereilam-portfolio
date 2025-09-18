@@ -2,11 +2,13 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { writeFileSync } from "fs";
 import { join } from "path";
+import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    svgr(),
     // Plugin to automatically create .htaccess file for Apache servers
     {
       name: "generate-htaccess",

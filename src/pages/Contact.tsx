@@ -3,6 +3,7 @@ import { Headline } from "../components/typography/Headline";
 import { SanitizedParagraph } from "../components/typography/SanitizedParagraph";
 import { useEffect, useState } from "react";
 import { MailerLiteForm } from "../components/MailerLiteForm";
+import { useLocation } from "react-router-dom";
 
 interface ContentContactProps {
   one: string;
@@ -12,6 +13,7 @@ interface ContentContactProps {
 export const Contact = () => {
   const [contentContact, setContentContact] = useState<ContentContactProps>();
 
+  const location = useLocation();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -79,7 +81,7 @@ export const Contact = () => {
           </Box>
         </SectionArticle>
       </ContactContainer>
-      <MailerLiteForm />
+      <MailerLiteForm key={location.pathname} />
     </Box>
   );
 };

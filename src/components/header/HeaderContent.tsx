@@ -1,7 +1,8 @@
 import { styled, useTheme } from "@mui/material/styles";
 import headerImage from "../../assets/images/header-main-img.jpg";
-import { Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useLocation, Link as RouterLink } from "react-router-dom";
+import { SocialMediaRow } from "./SocialMediaRow";
 
 const StyledHeaderContent = styled("div")(({ theme }) => ({
   display: "grid",
@@ -41,7 +42,9 @@ export const HeaderContent = () => {
     <StyledHeaderContent>
       <aside />
       <HeaderImage isHome={isHome} to="/" />
-      <aside />
+      <Box component="aside">
+        <SocialMediaRow />
+      </Box>
       <Typography
         component={RouterLink}
         to="/"

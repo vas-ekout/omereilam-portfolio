@@ -111,7 +111,7 @@ const darkTheme = createTheme({
     },
     background: {
       default: "hsl(0, 0%, 18%)",
-      paper: "hsl(0, 0%, 18%)",
+      paper: "hsl(0, 0%, 22%)",
       overlay: "hsl(0, 0%, 18%, 96%)",
     },
     text: {

@@ -32,7 +32,7 @@ export const AnimatedBurgerButton = ({
         animate={active ? "open" : "closed"}
         onClick={onClick}
         style={{
-          zIndex: 10,
+          zIndex: 20,
           position: "fixed",
           height: "64px",
           width: "64px",

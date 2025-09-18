@@ -20,7 +20,7 @@ const lightTheme = createTheme({
     },
     background: {
       default: "hsl(0, 0%, 100%)",
-      paper: "hsl(0, 0%, 100%)",
+      paper: "hsl(0, 0%, 86%)",
       overlay: "hsl(0, 0%, 100%, 90%)",
     },
     text: {

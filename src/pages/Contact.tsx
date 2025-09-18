@@ -2,18 +2,16 @@ import { Box, Link, styled, useMediaQuery, useTheme } from "@mui/material";
 import { Headline } from "../components/typography/Headline";
 import { SanitizedParagraph } from "../components/typography/SanitizedParagraph";
 import { useEffect, useState } from "react";
-import { MailerLiteForm } from "../components/MailerLiteForm";
 import { useLocation } from "react-router-dom";
-
+import MailerLiteHtmlEmbed from "../components/MailerLiteHtmlEmbed";
 interface ContentContactProps {
-  one: string;
-  two: string;
+  text: string;
 }
 
 export const Contact = () => {
   const [contentContact, setContentContact] = useState<ContentContactProps>();
 
-  const location = useLocation();
+  const { pathname } = useLocation();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -54,9 +52,9 @@ export const Contact = () => {
             }}
           >
             <Box sx={{ mb: 4 }}>
-              {contentContact?.one && (
+              {contentContact?.text && (
                 <SanitizedParagraph
-                  article={contentContact.one}
+                  article={contentContact.text}
                   sx={{ mb: 0 }}
                 />
               )}
@@ -73,15 +71,10 @@ export const Contact = () => {
                 omereilam1@gmail.com
               </Link>
             </Box>
-            <Box>
-              {contentContact?.two && (
-                <SanitizedParagraph article={contentContact.two} />
-              )}
-            </Box>
           </Box>
         </SectionArticle>
       </ContactContainer>
-      <MailerLiteForm key={location.pathname} />
+      <MailerLiteHtmlEmbed />
     </Box>
   );
 };

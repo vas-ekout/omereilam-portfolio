@@ -1,4 +1,11 @@
-import { IconButton, styled, Tooltip, Zoom } from "@mui/material";
+import {
+  IconButton,
+  styled,
+  Tooltip,
+  useMediaQuery,
+  useTheme,
+  Zoom,
+} from "@mui/material";
 import { ReactNode } from "react";
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
@@ -18,6 +25,9 @@ export const SocialMediaIconButton = ({
   urlString,
   tooltip,
 }: SocialMediaIconButtonProps) => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
   const handleIconClick = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -25,7 +35,7 @@ export const SocialMediaIconButton = ({
   return (
     <Tooltip
       title={tooltip}
-      placement="right"
+      placement={isSmallScreen ? "bottom" : "right"}
       slots={{ transition: Zoom }}
       slotProps={{
         tooltip: {

@@ -7,6 +7,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { ExtendedCalendarEventProps } from "../pages/Calendar";
+import { SanitizedParagraph } from "./typography/SanitizedParagraph";
 
 interface CalendarCardProps {
   calendarEvent: ExtendedCalendarEventProps;
@@ -61,9 +62,10 @@ export const CalendarCard = ({ calendarEvent }: CalendarCardProps) => {
         </Box>
       </Box>
       <Box sx={{ mt: 2 }}>
-        <Typography sx={{ mb: 0, lineHeight: 1.5 }}>
-          {calendarEvent.eventText}
-        </Typography>
+        <SanitizedParagraph
+          article={calendarEvent.eventText}
+          sx={{ mb: 0, lineHeight: 1.5 }}
+        />
         {calendarEvent.credits && (
           <Typography sx={{ mb: 0, lineHeight: 1.5 }}>
             {calendarEvent.credits}

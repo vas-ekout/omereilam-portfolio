@@ -1,6 +1,7 @@
 import { HomeSection, HomeSectionProps } from "../sections/Home/HomeSection";
 import { useEffect, useState } from "react";
 import { Calendar } from "./Calendar";
+import { Contact } from "./Contact";
 
 export const Home = () => {
   const [contentHome, setContentHome] = useState<HomeSectionProps[]>();
@@ -22,6 +23,7 @@ export const Home = () => {
         <HomeSection key={index} section={section.section} />
       ))}
       <Calendar isHomePage />
+      <Contact />
     </>
   );
 };

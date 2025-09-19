@@ -24,7 +24,8 @@
             "Imaginary Ecosystems is a musical framework based on the idea of “sound organisms”. In analogy to a real ecosystem, one can think of different sounds as organisms, each of them having its unique character that changes over time, and each also interacting with other organisms as well as with the performer."
           ],
           "img": "music-imaginary-ecosystems-01.jpg",
-          "readMoreUrl": "music/imaginary-ecosystems"
+          "readMoreUrl": "music/imaginary-ecosystems",
+          "imageFirst": false
         },
         {
           "headline": "Solar System Meditation",
@@ -32,7 +33,8 @@
             "The Solar System Meditation is a modern adaptation of Johannes Kepler's Music of the Spheres, where each planet corresponds to distinct sounds which continually evolve in time and space."
           ],
           "img": "music-solar-system-meditation-01.jpg",
-          "readMoreUrl": "music/solar-system-meditation"
+          "readMoreUrl": "music/solar-system-meditation",
+          "imageFirst": false
         }
       ]
     }
@@ -71,7 +73,8 @@
             "What if we stay here...<br/>Floating atop the abyss<br />Surrounded by beasts of prey"
           ],
           "img": "writings-what-if-we-stay-01.jpg",
-          "readMoreUrl": "https://omereilam.substack.com/p/what-if-we-stay-here"
+          "readMoreUrl": "https://omereilam.substack.com/p/what-if-we-stay-here",
+          "imageFirst": false
         },
         {
           "headline": "The Dove of Peace",
@@ -79,7 +82,8 @@
             "Yesterday I participated in a meeting with Faten, a Christian Palestinian woman living in Bethlehem. The meeting was organized by Gilda Bartel from Das Goetheanum magazine. It all started a couple of months ago when I sent my poem <i>Israel</i> to the editorial team of the magazine."
           ],
           "img": "writings-dove-of-peace-01.jpg",
-          "readMoreUrl": "https://omereilam.substack.com/p/the-dove-of-peace"
+          "readMoreUrl": "https://omereilam.substack.com/p/the-dove-of-peace",
+          "imageFirst": false
         }
       ]
     }

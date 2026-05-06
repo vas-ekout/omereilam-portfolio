@@ -1,8 +1,22 @@
-# React + Vite
+# Omer Eilam – Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A portfolio website for **Omer Eilam**, a Berlin-based musician and artist. Built as a freelance project and live at [omereilam.com](https://www.omereilam.com).
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** + **TypeScript** (Vite)
+- **MUI (Material UI)** – custom light/dark theme with monospace typography
+- **DOMPurify** – sanitized HTML rendering for rich text content
+
+## Features
+
+- Light/dark mode with a custom MUI theme (Geist Mono + Figtree typefaces)
+- Typewriter animation effect via custom `useTypewriter` hook
+- Fullscreen image gallery with keyboard-friendly modal navigation (previous/next)
+- Secure HTML rendering using DOMPurify with automatic `rel="noopener noreferrer"` injection on all external links
+- Sections: Home, Music, Writings, Calendar, Education, About, Contact
+- Substack and MailerLite embed integrations
+
+## Live
+
+[omereilam.com](https://www.omereilam.com)

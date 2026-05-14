@@ -3,20 +3,14 @@ import { Box, Link, styled, Typography } from "@mui/material";
 import { Headline } from "../components/typography/Headline";
 import { Fragment, useEffect, useState } from "react";
 import { CalendarCard } from "../components/CalendarCard";
+import {
+  ContentCalendarProps,
+  ExtendedCalendarEventProps,
+} from "../types/calendarTypes";
 
 interface StyledLinkProps {
   content: string;
   isActive: boolean;
-}
-
-interface ContentCalendarProps {
-  name: string;
-  date: string;
-  time: string;
-  location: string;
-  city: string;
-  eventText: string;
-  credits?: string;
 }
 
 const CalendarContainer = styled("div")(({ theme }) => ({
@@ -60,10 +54,6 @@ const StyledLink = styled(Link, {
 }));
 
 type ActiveCalendar = "PAST" | "FUTURE";
-
-export interface ExtendedCalendarEventProps extends ContentCalendarProps {
-  dateTime: dayjs.Dayjs;
-}
 
 interface CalendarProps {
   isHomePage?: boolean;

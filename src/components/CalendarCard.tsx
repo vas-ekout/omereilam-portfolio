@@ -3,10 +3,9 @@ import {
   Box,
   Divider,
   Typography,
-  useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { ExtendedCalendarEventProps } from "../pages/Calendar";
+import { ExtendedCalendarEventProps } from "../types/calendarTypes";
 import { SanitizedParagraph } from "./typography/SanitizedParagraph";
 
 interface CalendarCardProps {

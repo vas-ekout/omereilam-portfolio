@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { Box, Link, styled, Typography } from "@mui/material";
 import { Headline } from "../components/typography/Headline";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { CalendarCard } from "../components/CalendarCard";
 
 interface StyledLinkProps {
@@ -76,6 +76,9 @@ export const Calendar = ({ isHomePage }: CalendarProps) => {
   const [activeCalendar, setActiveCalendar] =
     useState<ActiveCalendar>("FUTURE");
 
+  const currentYear = dayjs().year();
+  const [selectedYear, setSelectedYear] = useState<number>(currentYear);
+
   useEffect(() => {
     fetch("/contentCalendar.json")
       .then((response) => response.json())
@@ -96,14 +99,19 @@ export const Calendar = ({ isHomePage }: CalendarProps) => {
   const today = dayjs().startOf("day");
 
   const pastEvents = calendarEvents
-    ?.filter((e) => e.dateTime.isBefore(today))
+    ?.filter(
+      (e) => e.dateTime.isBefore(today) && e.dateTime.year() === selectedYear,
+    )
     .sort((a, b) => b.dateTime.valueOf() - a.dateTime.valueOf());
 
   const futureEvents = calendarEvents?.filter(
-    (e) => !e.dateTime.isBefore(today)
+    (e) => !e.dateTime.isBefore(today),
   );
 
   const noEvents = <Typography>More events coming soon!</Typography>;
+  const noPastEvents = (
+    <Typography>No events found for {selectedYear}.</Typography>
+  );
 
   const displayedEvents = activeCalendar === "PAST" ? pastEvents : futureEvents;
 
@@ -131,11 +139,37 @@ export const Calendar = ({ isHomePage }: CalendarProps) => {
               future events
             </StyledLink>
           </Box>
-          {activeCalendar === "FUTURE" && futureEvents?.length === 0
-            ? noEvents
-            : displayedEvents?.map((item, index) => (
-                <CalendarCard key={index} calendarEvent={item} />
+          {activeCalendar === "PAST" && (
+            <Box sx={{ display: "flex", gap: 1.5, mt: 0.5 }}>
+              {Array.from(
+                { length: currentYear - 2025 + 1 },
+                (_, i) => 2025 + i,
+              ).map((year, i, arr) => (
+                <Fragment key={year}>
+                  <StyledLink
+                    variant="body2"
+                    content={String(year)}
+                    isActive={selectedYear === year}
+                    onClick={() => setSelectedYear(year)}
+                  >
+                    {year}
+                  </StyledLink>
+                  {i < arr.length - 1 && (
+                    <Typography variant="body2">|</Typography>
+                  )}
+                </Fragment>
               ))}
+            </Box>
+          )}
+          <Box sx={{ mt: activeCalendar === "PAST" ? "20px" : "45px" }}>
+            {activeCalendar === "FUTURE" && futureEvents?.length === 0
+              ? noEvents
+              : activeCalendar === "PAST" && pastEvents?.length === 0
+                ? noPastEvents
+                : displayedEvents?.map((item, index) => (
+                    <CalendarCard key={index} calendarEvent={item} />
+                  ))}
+          </Box>
         </Box>
         {!isHomePage && (
           <Box

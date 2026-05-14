@@ -1,10 +1,47 @@
 [
   {
+    "title": "Lichtwesen",
+    "mainImg": "music-lichtwesen-main.jpg",
+    "sections": [
+      {
+        "text": "Lichtwesen is a collaborative performance by composer Omer Eilam and light artist Paul Böhme."
+      },
+      {
+        "text": "The work is rooted in Imaginary Ecosystems, a musical framework that understands sound as a living organism. Like elements within a natural ecosystem, each sound carries its own character, evolving and interacting over time."
+      },
+      {
+        "text": "In this performance, music from Eilam’s recent album unfolds on a specially designed multi-channel sound system, accompanied by Liquid Light Projection choreographed specifically for the pieces. Through the interplay of sound and light, Lichtwesen gives rise to ephemeral beings—an ecosystem brought to life."
+      }
+    ],
+    "gallery": {
+      "imgs": [
+        {
+          "imgSrc": "music-lichtwesen-1.jpg"
+        },
+        {
+          "imgSrc": "music-lichtwesen-2.jpg"
+        },
+        {
+          "imgSrc": "music-lichtwesen-3.jpg"
+        },
+        {
+          "imgSrc": "music-lichtwesen-4.jpg"
+        },
+        {
+          "imgSrc": "music-lichtwesen-5.jpg"
+        }
+      ]
+    },
+    "youtubeSrc": [
+      "https://www.youtube.com/embed/lUzFLKt1FMI?si=j2J3_DGeSG4J8mnp"
+    ]
+  },
+  {
     "title": "Imaginary Ecosystems",
     "mainImg": "music-imaginary-ecosystems-main.jpg",
     "sections": [
       {
-        "text": "Imaginary Ecosystems is an interactive musical environment based on synthesized “sound organisms”."
+        "text": "Imaginary Ecosystems is an interactive musical environment based on synthesized “sound organisms”. It is also the title of my debut album which can be found on <a href='https://omereilam.bandcamp.com/album/imaginary-ecosystems'>Bandcamp</a> and various <a href='https://distrokid.com/hyperfollow/omereilam/imaginary-ecosystems'>streaming platforms</a>."
       },
       {
         "text": "The idea for the project started around 2015 when I was studying in The Institute of Sonology in The Hague and experimenting with generative music patterns. Like many other electronic musicians I was excited about the possibility of using computer algorithms to govern the 'behaviour' a certain sound exhibits. Based on predefined rules, different parameters of a sound – e.g. its timbre, pitch, loudness, etc. – can change over time in a process that tries to mimic the behaviour of real organisms in nature. When applying this idea to several sound organisms at once and letting them influence the behaviour of each other one can think of this scenario as an ecosystem of sounds"
@@ -17,14 +54,7 @@
       },
       {
         "text": "From a musical point of view, the two Imaginary Ecosystems compositions are an interesting case study for the relationship between composition and improvisation in electronic music. The working process began through an improvisation with the sound material, similar to the way organisms in nature playfully relate to each other. This allowed the sound organisms to evolve and interact in ever changing ways. The second step of recording the results was like taking snapshots or timelapses of these ecosystems. Finally, the concluding compositional process could be likened to sculpting in musical time: some segments were removed, others adjusted, a narrative incorporated and assembled into a musical whole. For example, one of the pieces contains an apocalyptic prophecy from the Book of Ezekiel which symbolizes both destruction and the potential for regeneration. The initial soundscape is sparse and fragmentary, consisting of brittle whispers suggesting aridity, decay and dissolution. Using digital synthesis techniques, these sound fragments are reconstructed, gradually forming richer textures that symbolize the process of revival."
-      },
-      {
-        "text": "The two pieces together with my 2023 composition Solar System Meditation are due to be released as an album in 2025."
       }
-    ],
-    "soundcloudSrc": [
-      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1611501414&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1796815201&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     ]
   },
   {
@@ -78,10 +108,10 @@
       },
       {
         "text": "In a concert setting, listeners would find themselves seated at the heart of the hall, akin to the sun's central position, surrounded by celestial melodies and rhythms, as if the planets themselves were orbiting around them."
+      },
+      {
+        "text": "A stereo version of the piece can be found on <a href='https://omereilam.bandcamp.com/track/solar-system-meditation'>Bandcamp</a>."
       }
-    ],
-    "soundcloudSrc": [
-      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1626574986&color=%23494a37&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     ]
   },
   {
@@ -171,7 +201,7 @@
         "text": "At the moment of writing only half of the cycle was completed and performed during my Final Exam Concert in The Institute of Sonology, The Royal Conservatoire, The Hague, in June 2017."
       },
       {
-        "text": "My entire Master's thesis entitled 'Karlheinz Stockhausen's TIERKREIS: An arrangement for electronic music, instruments and voices' can be downloaded from <a href='/downloads/omer-eilam-tierkreis-master-thesis.pdf'>here<a>."
+        "text": "My entire Master's thesis entitled 'Karlheinz Stockhausen's TIERKREIS: An arrangement for electronic music, instruments and voices' can be downloaded from <a href='/downloads/omer-eilam-tierkreis-master-thesis.pdf'>here</a>."
       }
     ],
     "soundcloudSrc": [

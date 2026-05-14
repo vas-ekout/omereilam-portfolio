@@ -85,7 +85,7 @@ const lightTheme = createTheme({
       fontFamily: '"Geist Mono", monospace, sans-serif',
       fontSize: "0.8rem",
       lineHeight: 1,
-      marginBottom: 45,
+      marginBottom: 8,
     },
   },
   shape: {

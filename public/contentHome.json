@@ -5,7 +5,7 @@
       "articles": [
         {
           "article": [
-            "Omer Eilam is a musician based in Berlin. He composes electroacoustic music and plays synthesizers, piano and flute. With works ranging from the sonification of heavenly bodies to the destruction of forests, his focus lies on what it means to be human in our day and age. Alongside his compositional practice he teaches experimental music in schools and gives workshops for exploring the voice and developing the Art of Listening. As a writer he explores existential themes related to music, spirituality, philosophy and activism."
+            "Omer Eilam is a musician and writer based in Berlin. He composes electroacoustic music and plays synthesizers, piano and flute. With works ranging from the sonification of heavenly bodies to the exploration of imaginary ecosystems, his focus lies on what it means to be human in our day and age. Alongside his compositional practice he teaches experimental music in schools and gives workshops for developing the Art of Listening. As a writer he is particularly attuned to the theme of war and the transcendent potential of poetry."
           ],
           "img": "about-01.jpg",
           "readMoreUrl": "about"
@@ -19,6 +19,15 @@
       "label": "Music",
       "articles": [
         {
+          "headline": "Lichtwesen",
+          "article": [
+            "Lichtwesen is a collaborative performance by composer Omer Eilam and liquid-light artist Paul Böhme."
+          ],
+          "img": "home-lichtwesen.jpg",
+          "readMoreUrl": "music/lichtwesen",
+          "imageFirst": false
+        },
+        {
           "headline": "Imaginary Ecosystems",
           "article": [
             "Imaginary Ecosystems is a musical framework based on the idea of “sound organisms”. In analogy to a real ecosystem, one can think of different sounds as organisms, each of them having its unique character that changes over time, and each also interacting with other organisms as well as with the performer."
@@ -26,16 +35,8 @@
           "img": "music-imaginary-ecosystems-01.jpg",
           "readMoreUrl": "music/imaginary-ecosystems",
           "imageFirst": false
-        },
-        {
-          "headline": "Solar System Meditation",
-          "article": [
-            "The Solar System Meditation is a modern adaptation of Johannes Kepler's Music of the Spheres, where each planet corresponds to distinct sounds which continually evolve in time and space."
-          ],
-          "img": "music-solar-system-meditation-01.jpg",
-          "readMoreUrl": "music/solar-system-meditation",
-          "imageFirst": false
         }
+
       ]
     }
   },
@@ -46,7 +47,7 @@
         {
           "headline": "QuerKlang",
           "article": [
-            "In 2024/25 Omer Eilam participated in the QuerKlang project for experimental music education. Taking place in 10 high-schools in Berlin the project brings together teachers with musicians to lead school children in a creative process that culminates in a performance at the MAERZMUSIK Festival."
+            "Since 2024 Omer Eilam is part of the QuerKlang project for experimental music education. Taking place in a variety of Berlin high schools the project brings together teachers with musicians to lead school children in a creative process that culminates in a performance at the MAERZMUSIK Festival."
           ],
           "img": "education-querklang-01.jpg",
           "readMoreUrl": "education/querklang"
@@ -54,7 +55,7 @@
         {
           "headline": "The Art of Listening",
           "article": [
-            "In 2025 Omer Eilam will lead a series of lectures under the title 'The Art of Listening' in various libraries across Berlin as part of lev-berlin, a collective of musicians whose aim is to facilitate electronic music education for the general public."
+            "Beginning in 2025 Omer Eilam is leading a series of lectures under the title 'The Art of Listening' as part of lev-berlin, a collective of musicians whose aim is to facilitate electronic music education for the general public."
           ],
           "img": "education-lev-01.jpg",
           "readMoreUrl": "education/the-art-of-listening"
@@ -68,12 +69,12 @@
       "label": "Writings",
       "articles": [
                 {
-          "headline": "Long Lasting Peace",
+          "headline": "Again and Again",
           "article": [
-            "I am not happy today.<br/>I am not sad either.<br/>I have been in this moment before."
+            "Recollections from Buchenwald, past & present."
           ],
-          "img": "writings-long-lasting-peace.jpg",
-          "readMoreUrl": "https://omereilam.substack.com/p/long-lasting-peace",
+          "img": "writings-again-and-again.jpg",
+          "readMoreUrl": "https://omereilam.substack.com/p/again-and-again",
           "imageFirst": false
         },
         {

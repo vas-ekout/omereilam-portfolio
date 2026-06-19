@@ -1,12 +1,22 @@
 # Omer Eilam – Portfolio Website
 
-A portfolio website for **Omer Eilam**, a Berlin-based musician and artist. Built as a freelance project and live at [omereilam.com](https://www.omereilam.com).
+A portfolio website for Berlin-based composer and musician **Omer Eilam**, built as a freelance project.
+
+## Screenshots
+
+<img src="screenshots/screenshot-desktop-01.jpg" alt="Omer Eilam Website – Desktop" width="100%" />
+<img src="screenshots/screenshot-desktop-02.jpg" alt="Omer Eilam Website – Desktop" width="100%" />
+<img src="screenshots/screenshot-mobile-01.jpg" alt="Omer Eilam Website – Mobile" width="360" />
+<img src="screenshots/screenshot-mobile-02.jpg" alt="Omer Eilam Website – Mobile" width="360" />
 
 ## Tech Stack
 
 - **React** + **TypeScript** (Vite)
-- **MUI (Material UI)** – custom light/dark theme with monospace typography
-- **DOMPurify** – sanitized HTML rendering for rich text content
+- **MUI (Material UI)** – component library, custom theming
+- **DOMPurify** – HTML sanitization
+- **dayjs** – date formatting
+- **React Router** – client-side routing
+- **Framer Motion** – animations and transitions
 
 ## Features
 
@@ -17,6 +27,6 @@ A portfolio website for **Omer Eilam**, a Berlin-based musician and artist. Buil
 - Sections: Home, Music, Writings, Calendar, Education, About, Contact
 - Substack and MailerLite embed integrations
 
-## Live
+## Status
 
-[omereilam.com](https://www.omereilam.com)
+Deployed and live at https://www.omereilam.com

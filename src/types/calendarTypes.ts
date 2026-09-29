@@ -8,6 +8,7 @@ export interface ContentCalendarProps {
   city: string;
   eventText: string;
   credits?: string;
+  img?: { src: string; credit?: string };
 }
 
 export interface ExtendedCalendarEventProps extends ContentCalendarProps {

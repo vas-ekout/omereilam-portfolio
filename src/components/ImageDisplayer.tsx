@@ -28,6 +28,7 @@ export const ImageDisplayer = ({ section }: ImageDisplayerProps) => {
             easing: theme.transitions.easing.easeOut,
           }),
           "&:hover": { ...imageHoverEffect },
+          ...section.img?.thumbnailSx,
         }}
         onClick={() => setIsOpen(true)}
       />

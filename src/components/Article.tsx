@@ -1,4 +1,4 @@
-import { Box, styled, useMediaQuery, useTheme } from "@mui/material";
+import { Box, styled, SxProps, useMediaQuery, useTheme } from "@mui/material";
 import { SanitizedParagraph } from "./typography/SanitizedParagraph";
 import { TextHead } from "./typography/TextHead";
 import React from "react";
@@ -8,7 +8,7 @@ import { Gallery, GalleryProps } from "./gallery/Gallery";
 export interface GridContentSection {
   textHead?: string;
   text?: string;
-  img?: { src: string; credit?: string };
+  img?: { src: string; credit?: string; thumbnailSx?: SxProps };
 }
 
 export interface GridContentProps {

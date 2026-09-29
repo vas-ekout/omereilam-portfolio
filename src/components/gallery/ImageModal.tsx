@@ -6,6 +6,7 @@ import {
   IconButton,
   styled,
   Typography,
+  useMediaQuery,
   useTheme,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -46,6 +47,10 @@ export const ImageModal = ({
   totalImages = 0,
 }: ImageModalProps) => {
   const theme = useTheme();
+  const dialogPadding: number = useMediaQuery(theme.breakpoints.down("sm"))
+    ? 2
+    : 7;
+
   const showNavigation = totalImages > 1;
 
   return (
@@ -58,7 +63,7 @@ export const ImageModal = ({
         sx: {
           backgroundColor: alpha(
             theme.palette.background.overlay as string,
-            0.9
+            0.9,
           ),
         },
       }}
@@ -99,29 +104,7 @@ export const ImageModal = ({
         </>
       )}
 
-      {/* Image counter */}
-      {/* {showNavigation && (
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: 72,
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 1,
-            backgroundColor: backgroundColorIconHover,
-            borderRadius: 1,
-            px: 2,
-          }}
-        >
-          <Typography
-            sx={{ fontSize: 12, fontWeight: 700, mb: 0, color: "white" }}
-          >
-            {currentIndex + 1} / {totalImages}
-          </Typography>
-        </Box>
-      )} */}
-
-      {imgCredit && (
+      {imgCredit && theme.palette.background.overlay && (
         <Box
           sx={{
             display: "flex",
@@ -161,6 +144,8 @@ export const ImageModal = ({
           src={imgSrc}
           alt="Fullscreen Image"
           sx={{
+            p: dialogPadding,
+            pb: imgCredit ? dialogPadding * 2 : dialogPadding,
             width: "auto",
             height: "auto",
             objectFit: "contain",

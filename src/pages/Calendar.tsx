@@ -157,7 +157,11 @@ export const Calendar = ({ isHomePage }: CalendarProps) => {
               : activeCalendar === "PAST" && pastEvents?.length === 0
                 ? noPastEvents
                 : displayedEvents?.map((item, index) => (
-                    <CalendarCard key={index} calendarEvent={item} />
+                    <CalendarCard
+                      key={index}
+                      calendarEvent={item}
+                      isHomePage={isHomePage}
+                    />
                   ))}
           </Box>
         </Box>

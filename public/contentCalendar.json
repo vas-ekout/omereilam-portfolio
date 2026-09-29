@@ -1,11 +1,29 @@
 [
   {
+    "name": "Liquid Light trifft Stockhausen's LICHT",
+    "date": "2026-11-14",
+    "time": "18:00",
+    "location": "Raum für Klang und Architektur",
+    "city": "Falkensee",
+    "eventText": "Liquid Light Projection choreographed especially for Karlheinz Stockhausen’s MITTWOCHs GRUSS from the opera cycle LICHT. Accompanying the 50-minute electronic music composition, the three musical protagonists of the piece — Michael, Eva, and Lucifer — are portrayed in interpenetrating colors and forms.<br/><br/> Registration required: omereilam1@gmail.com",
+    "img": { "src": "calendar-liquid-light.jpg" }
+  },
+  {
+    "name": "Imaginary Ecosystems – Sound Installation",
+    "date": "2026-06-04",
+    "time": "20:30",
+    "location": "FLUXUS Museum",
+    "city": "Potsdam",
+    "eventText": "Imaginary Ecosystems is an interactive sound installation that explores the boundaries between natural and artificial systems through a generative ecology of sound. It invites visitors into a living sonic environment — an evolving ecosystem of autonomous “sound organisms”.",
+    "credits": "Omer Eilam: Cocept & Implementation, Vasileios Paras: Visual Design"
+  },
+  {
     "name": "Opfer",
     "date": "2026-05-08",
     "time": "18:00",
     "location": "Parochialkirche",
     "city": "Berlin",
-    "eventText": "Performance of the piece Vision of the Valley of Dry Bones accompanied by Liquid Light Projection as part of the Opfer exhibition. Together with 14 other artists, all from migrant backgrounds, we set out to explore the layered meanings of the German word “Opfer.”"
+    "eventText": "Performance of the piece Vision of the Valley of Dry Bones accompanied by Liquid Light Projection as part of the Opfer exhibition. Together with 14 other artists, all from migrant backgrounds, we set out to explore the layered meanings of the German word “Opfer”."
   },
   {
     "name": "Lichtwesen",

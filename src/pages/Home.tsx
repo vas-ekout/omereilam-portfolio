@@ -23,7 +23,7 @@ export const Home = () => {
         <HomeSection key={index} section={section.section} />
       ))}
       <Calendar isHomePage />
-      <Contact />
+      <Contact isHomePage />
     </>
   );
 };

@@ -2,16 +2,14 @@ import { Box, Link, styled, useMediaQuery, useTheme } from "@mui/material";
 import { Headline } from "../components/typography/Headline";
 import { SanitizedParagraph } from "../components/typography/SanitizedParagraph";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import MailerLiteHtmlEmbed from "../components/MailerLiteHtmlEmbed";
 interface ContentContactProps {
   text: string;
 }
 
-export const Contact = () => {
+export const Contact = ({ isHomePage }: { isHomePage?: boolean }) => {
   const [contentContact, setContentContact] = useState<ContentContactProps>();
 
-  const { pathname } = useLocation();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -42,7 +40,10 @@ export const Contact = () => {
   return (
     <Box>
       <ContactContainer>
-        <Headline label={"Contact"} />
+        <Headline
+          label={"Contact"}
+          routerLinkTo={isHomePage ? "contact" : ""}
+        />
         <SectionArticle>
           <Box
             sx={{

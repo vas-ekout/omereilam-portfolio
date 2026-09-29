@@ -107,7 +107,10 @@ export const Calendar = ({ isHomePage }: CalendarProps) => {
 
   return (
     <CalendarContainer>
-      <Headline label={"Calendar"} />
+      <Headline
+        label={"Calendar"}
+        routerLinkTo={isHomePage ? "calendar" : ""}
+      />
       <SectionArticle>
         <Box sx={{ width: { xs: "100%", md: isHomePage ? "100%" : "50%" } }}>
           <Box sx={{ display: "flex", gap: 1.5 }}>
